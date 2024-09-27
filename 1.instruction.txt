@@ -1,77 +1,77 @@
-1. Ne folderin "database file", ndodhet file i database qe duhet ngarkuar ne XAMPP.
-2. Projekti permban nje portofol dhe nje shop.
-Projektin mund ta fillosh ta shohesh qe nga portofoli dhe nga aty mund te vazhdosh me tej per te pare
-shop-in. Nqs e fillon nga portofoli ndiq kete url(http://localhost/Project1/index.html)
-dhe per te vazhduar per te pare shop-in, shko te menuja e portofolit-opsioni 'projektet'.
-Nqs deshiron ta shohesh shop-in vec, url(http://localhost/Project1/shop_index.php).
-Projekti pervec PC version eshte i pershtatur dhe ne keto dimensione : 
+1. In the "database file" folder, there is a database file that must be uploaded to XAMPP.
+2. The project contains a portfolio and a shop.
+You can start viewing the project from the portfolio and from there you can continue further to see
+shop-in. If you start from the wallet, follow this url (http://localhost/Project1/index.html)
+and to continue to see the shop, go to the portfolio menu - the 'projects' option.
+If you want to see the shop separately, url(http://localhost/Project1/shop_index.php).
+Apart from the PC version, the project is also suitable in these dimensions:
 (mobile version < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min)).
--Shop-i tregon tere njohurite e mia per sa i perket WEB DEV.
-*Shop-i e ka emrin 'JoyBoy'.
-Ne projekt vetem dicka nuk funksionon qe eshte "search bar" ne kete file "index.html", per arsye se sic e permenda dhe me lart
-ky projekt eshte bere me synim per te perfshire tere njohurite e mia, dhe ky file ne fillim ka qene nje mini projekt tjeter
-qe ishte nje galeri me foto dhe kur klikohej fotua hapej versioni ose madhesia origjinale e fotos, dhe "search bar" atehere ka
-qene thjesht per pamje, dhe tere fotot jane te ngarkuara si background img dhe jo me database, dhe kur mendova ta perfshije ne projekt
-si faqe te pare te shop-it bera tere ndryshimet e nevojshme pervec "search bar-it" sepse nqs duhet ta ndryshoja dhe ate, duhet te ndryshoja tere 
-sistemin e faqes dhe vendosa ta le sic eshte me qellim qe te ruaja iden e projekti qe ishte, pra nje galleri me foto.
-Shop-i eshte i ndertuar me iden per te shitur filma online, faqa e pare permban thjesht nje informacion per userin qe ta bej me dije,
-useri aty mund te shohi disa nga filmat qe permban shop-i dhe pak informacion per te. Nqs useri vendos te blej nje film ai duhet te krijoj
-nje account ne website. Ku mund te shkoj tek "signup", dhe te krijoj accountin e tij. Kam perfshire dhe 'some security' ne 
-"signup" dhe "login" system, qe jane : 
-1.per sa i perket "signup":
--userit i lejohet vetem shkronja dhe hapsire kur plotson te dhenat e tij,
--useri nuk mund te avancoj me tej duke lene 'empty inputs',
--kontrollohet nqs email eshte invalid,
--kontrollohet nqs nje user me te njejtin emer dhe mbiemer ne te njejten kohe eshte i rregjistruar,
--kontrollohet gjithashtu nqs email eshte i rregjistruar.
-2.per sa i perket "login":
--userit nuk mund te avancoj me tej duke lene 'empty inputs',
--email i gabuar,
--password i gabuar.
-Keto errore nuk behen display ne website per arsye qe userit duhet ti japim sa me pak info te jete e mundur per arsye sigurie,
-por nqs deshiron ti shohesh dhe ne website shko ne filet "signup.php" qe ti besh remove komentit dhe ta lesh ne gjendje normale 
-thirrjen e funksionit gjithashtu dhe te "signup_view.php" ti besh remove komentit nga vete funksioni, dhe me pas mund ta testosh 
-ne website, dhe nqs ben errore do te shfaqen ne formen e "alertit", te njejten gje mund te besh dhe me "login.php" & "login_view.php". 
-Tek "signup.php" kam bere te mundur qe nqs gjate plotsimit te rregjistrimit useri ben dicka gabim, emri dhe mbiemri te mbetet 
-dhe mos ta shkruaj perseri emrin dhe mbiemrin gjate plotsimit per tu rregjistruar, *por vetem emri&mbiemeri dhe *vetem tek "signup".
-Mbas rregjistrimit dhe mbas logimit, ne faqen e userit "profile.php", fillimisht nuk do ket asnje produkt per arsye se duhet te shkoni
-ne url(http://localhost/Project1/admin_login.php) ose url(http://localhost/Project1/admin_signup.php), kjo eshte faqa e adminit qe
-kontrollon gjithcka per sa i perket shop-it, sistemit i rregjistrimit dhe logimit funksionon ne te njejten menyre si useri dhe per sa i
-perket 'security-it'.Ne faqen e admin duhet te shkoni tek 'products' dhe aty duhet te ngarkoni tere produketet nga folderi "upload_img_products",
-dhe mund ti vendosni emrin, cmimin produktit. Qe me pas ti shfaqet userit, aty mund te ngarkoni sa produkte te duash, ose ti
-ndryshosh emrin nje produkti ose ta fshish nje produkt. Gjithashtu emri i produktit qe do ti vendosesh do te sherbej dhe per sa
-i perket "search bar-it" brenda ne faqen e userit, qe ne kete rast punon, sepse cdo gje eshte e ngarkuar ne database dhe mund ti besh search, 
-nje produkt fiks me emrin qe i vendoset. Tek faqa e userit sapo te shfaqen produketet pas ngarkimit nga admini, mund te selektosh 
-sa produkte te nevojitem dhe shkojne direkt te 'karta e shopit', pasi te mbarosh me selektimin, te menuja ne te djatht-lart kliko dhe shko te 'cart',
-aty mund ti fshish tere produktet e selektuara ose te vazhdosh perseri me selektimi te fq kryesore ose mund te vazhdosh me 'checkout'.
-Ne checkout do te gjesh tere info per cfare useri ka vendos te blej, dhe i duhet te plotsoj te dhenat per te vazhduar me tej.
-Ne plotsimin e te dhenave perseri ka 'security':
--lejohet vetem shkronja, numra dhe hapsira,
--nuk lejohet empty inputs,
--kontrollohet nqs eshte emri i sakt i userit,
--kontrollohet nqs eshte emaili i sakt i userit,
-dhe nqs email eshte invalid ose jo.
-Vepro ne te njejten menyre per te testuar erroret: "checkout.php" & "checkout_view.php".
-Pas plotsimit me sukses te te dhenave porosia eshte derguar tek admini, dhe te useri porosia do te jete me statusin "pending".
-Tek admini te 'orders', atje mund te kryhesh veprimet e nevojshme si psh ta besh statusin e porosis "completed" dhe ketu perfundon dhe ideja e shit-blerjes, e njejta gje
-do i shfaqet dhe userit,... ose te fshije accountin e nje useri ose te shohesh mesazhet e derguara nga useri.
-Tek admini gjithashtu ndodhet dhe "dashboard", i cili mban tere infon e nevojshme per sa i perket shop-it.
-Ne te dyja rastet si tek useri dhe te admini, perdoruesi mund te ndryshoj emrin ose passwordin e accountit, te cilat me pas ndryshohen dhe
-ne database dhe gjithashtu mund te fshij accountin e tij.
-Per sa i perket mesazheve, useri nuk mund te dergoj mesazhe pa krijuar nje account te tij me pare, dhe kete gje mund te testohet tek "index.html".
-Ketu gjithashtu ka "security":
--lejohet vetem shkronja, numra dhe hapsira,
--nuk lejohet empty inputs,
--emaili i sakt,
-dhe kontrollohet nqs emaili i userit eshte invalid.
+- The shop shows all my knowledge regarding WEB DEV.
+*The name of the shop is 'JoyBoy'.
+In the project, only something does not work, which is the "search bar" in this "index.html" file, for reasons as I mentioned above.
+this project was made with the intention to include all my knowledge, and this file was at first another mini project
+which was a photo gallery and when the photo was clicked, the original version or size of the photo was opened, and the "search bar" then has
+it was just for looks, and all the photos are loaded as background img and not with database, and when I thought to include it in the project
+as the first page of the shop, I made all the necessary changes except for the "search bar" because if I had to change that too, I had to change everything
+system of the site and I decided to leave it as it is in order to preserve the idea of ​​the project that was, that is, a photo gallery.
+The shop is built with the idea of ​​selling movies online, the first page simply contains information for the user to let him know,
+the user can see some of the films that the shop contains and some information about it. If the user decides to buy a movie, he must create it
+an account on the website. Where can I go to "signup", and create his account. I also included 'some security' in it
+"signup" and "login" system, which are:
+1. regarding "signup":
+- the user is only allowed letters and spaces when filling in his data,
+- the user cannot advance further by leaving 'empty inputs',
+- it is checked if the email is invalid,
+- it is checked if a user with the same first and last name is registered at the same time,
+- it is also checked if the email is registered.
+2. regarding "login":
+- the user cannot advance further by leaving 'empty inputs',
+-wrong email,
+-wrong password.
+These errors are not displayed on the website because we must give the user as little information as possible for security reasons.
+but if you want to be seen on the website, go to the "signup.php" file to remove the comment and leave it in a normal state
+call the function also in "signup_view.php" remove the comment from the function itself, and then you can test it
+on the website, and if you make an error, they will appear in the form of an "alert", you can do the same with "login.php" & "login_view.php".
+In "signup.php" I made it possible that if the user makes a mistake during registration, the name and surname remain
+and don't write the first and last name again when filling out to register, *but only the first and last name and *only in "signup".
+After registration and after logging in, on the user's "profile.php" page, there will initially be no product for the reason that you have to go
+at url(http://localhost/Project1/admin_login.php) or url(http://localhost/Project1/admin_signup.php), this is the admin page that
+controls everything regarding the shop, the registration and logging system, it works in the same way as the user and as far as
+regarding 'security'. On the admin page you should go to 'products' and there you should upload all the products from the folder "upload_img_products",
+and you can set the product name and price. Then it appears to the user, where you can upload as many products as you want, or you
+change the name of a product or delete a product. Also, the name of the product that you will decide will serve and for how much
+It concerns the "search bar" inside the user's page, which in this case works, because everything is loaded in the database and you can search.
+a fixed product with the name assigned to it. On the user's page, as soon as the products appear after uploading by the admin, you can select
+how many products you need and they go directly to the 'shop card', after you finish the selection, click on the menu on the top right and go to 'cart',
+there you can delete all the selected products or continue again by selecting the main page or you can continue with 'checkout'.
+In the checkout you will find all the information about what the user decided to buy, and he needs to fill in the data to continue.
+In filling out the data again there is 'security':
+- only letters, numbers and spaces are allowed,
+-empty inputs are not allowed,
+- it is checked if it is the correct user name,
+- it is checked if it is the correct email of the user,
+and if the email is invalid or not.
+Do the same to test the errors: "checkout.php" & "checkout_view.php".
+After successfully completing the data, the order has been sent to the admin, and to the user the order will be in "pending" status.
+In the 'orders' admin, there you can perform the necessary actions, such as making the status of the order "completed" and this is where the idea of ​​buying and selling ends, the same thing
+it will be shown to the user,... or to delete a user's account or to see the messages sent by the user.
+The admin also has a "dashboard", which contains all the necessary information regarding the shop.
+In both cases, both for the user and for the admin, the user can change the name or password of the account, which are then changed and
+in the database and I can also delete his account.
+Regarding messages, the user cannot send messages without creating an account first, and this can be tested in "index.html".
+There is also "security" here:
+- only letters, numbers and spaces are allowed,
+-empty inputs are not allowed,
+-correct email,
+and it is checked if the user's email is invalid.
 
-Kam vendosur gjithashtu security dhe per "session-in", kam vendosur rigjenerimin e session id me kohe 30 min, dhe me pak fjale
-session id do te rigjenerohet cdo 30 min dhe kjo do te bej qe accounti i userit te bej logout ne menyre automatike,
-dhe userit i duhet te loggohet perseri. file "config_session.php".
+I have also set security and for the "session", I have set the regeneration of the session id with a time of 30 min, and in a few words
+session id will be regenerated every 30 min and this will cause the user account to log out automatically,
+and the user must log in again. file "config_session.php".
 
 
-*Nje permbledhje e aftesive te mia:
-HTML,CSS,PHP,krijimin e database dhe lidhja me website-in i kam punuar vete, persa i perket JavaScript di gjuhen bazat por me eshte dashur dhe ndihma e internetit
-te krijoja idene qe kisha.
-Persa i perket WordPress, kam punuar website te ndryshme, si website duke filluar nga zero dhe kam ndertuar tere website-in, por edhe me template te gatshme dhe
-me pas modifikimin e tyre.
+*A summary of my skills:
+I worked on HTML, CSS, PHP, database creation and the connection to the website myself, as for JavaScript, I know the basics of the language, but I also needed the help of the Internet.
+to create the ideas I had.
+As for WordPress, I have worked on different websites, such as a website starting from scratch and I have built the entire website, but also with ready-made templates and
+then modifying them.
