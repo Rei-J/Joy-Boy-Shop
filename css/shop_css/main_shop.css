@@ -1,0 +1,1367 @@
+/* fonts */
+@font-face {
+    font-family: Roboto;
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Light.ttf);
+}
+@font-face {
+    font-family: RobotoSlabMedium;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoSlabBold;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Bold.ttf);
+}
+
+/* html/root */
+:root{
+    --white: #fff;
+    --yellowgray: #7c6b41;
+    --lightgray: #ddd;
+    --darkgray: #1e1e1e;
+    --lightdarkgray: #3b3b3b;
+    --gray: gray;
+    --gray2: #323131;
+    --gray3: #4a4949;
+    --black: #000;
+    --red: red;
+    --darkred: #790202;
+    --redversion: #d82d2d;
+    --yellow: yellow;
+    --green: green;
+    --purple: purple;
+    --orange: orange;
+    --brown: brown;
+    --chocolate: chocolate;
+    --blue: blue;
+    --lightyellow: #fad985;
+    --skyblue: #4e84c4;
+    --box-shadow:0 .5rem 1rem rgb(0, 0, 0);
+    --box-shadow-gray: 0 .2rem .2rem .2rem #323131;
+    --menu-count: 3; /* list items */
+    /* --sub-menu-count: 2; */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--darkgray);
+}
+
+/*reload the content before to remove the flicker of the image*/
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../../img/shop_img/JoyBoy-background.png), url(../../img/shop_img/anime-background.jpg), url(../../img/shop_img/Joy_Boy_transparent.png);
+}
+
+/* wrapper-main */
+
+
+
+
+.wrapper-gallery{
+    margin: 0 20vw;
+}
+.wrapper-anime{
+    margin: 0 20vw;
+}
+
+
+/* default styling */
+h1{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+}
+
+a{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+/* burger-menu */
+.burger-menu{
+    display: none;
+}
+.burger-menu-btn{
+    display: none;
+}
+
+
+/* header */
+.header-main{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding: 0 6rem;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: var(--darkgray);
+}
+.header-main nav{
+    display: flex;
+    flex: 2 0 10rem;
+}
+.shop_logo {
+    width: fit-content;
+    height: 4rem;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.shop_logo img{
+    height: 80%;
+    border-radius: 1.5rem;
+}
+.header-main nav ul{
+    display: flex;
+    height: 4rem;
+    list-style: none;
+    align-self: center;
+    margin-left: 10rem;
+}
+.header-main nav ul li a{
+    height: 100%;
+    display: block;
+    padding: 0 1rem;
+    line-height: 40px;
+    font-size: 1rem;
+    font-family: RobotoSlabMedium;
+    text-transform: uppercase;
+    color: var(--lightgray);
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+.header-main nav ul li a:hover{
+    border: 0.1rem solid var(--lightgray);
+}
+.search{
+    display: flex;
+    flex: 2 0 10rem;
+    align-self: center;
+}
+.search form{
+    width: fit-content;
+    height: 3rem;
+    display: flex;
+    padding-right: 0.5rem;
+    align-self: center;
+    border: 0.1rem solid var(--lightgray);
+    border-radius: 2rem 10rem 10rem 2rem;
+}
+.search input{
+    width: 50rem;
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: RobotoSlab;
+    padding: 0 1rem 0 2rem;
+    color: var(--lightgray);
+}
+.search input:focus{
+    border: 0.1rem solid var(--white);
+}
+.search button{
+    width: fit-content;
+    padding: 0 0.5rem 0 1rem;
+    border-radius: 0 1.8rem 1.8rem 0;
+}
+.search button img{
+    height: 2.4rem;
+    padding-top: 15%;
+    cursor: pointer;
+}
+.register{
+    flex: 1 0 10rem;
+    display: flex;
+}
+.register a{
+    margin: 1rem 2rem;
+}
+.login{
+    display: block;
+    width: 7rem;
+    height: 100%;
+    border-radius: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: RobotoSlabBold;
+    background-color: var(--lightgray);
+    color: var(--darkgray);
+}
+.login:hover{
+    background-color: var(--black);
+    color: var(--lightgray);
+}
+.singup{
+    display: block;
+    width: 7rem;
+    height: 100%;
+    border-radius: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.17rem;
+    font-family: RobotoSlabBold;
+    border: 0.1rem solid var(--black);
+}
+.singup:hover{
+    border: 0.1rem solid var(--lightgray);
+    color: var(--black);
+}
+
+/* aside social media */
+.aside-sm{
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-end; /* Align to the right horizontally */
+    width: fit-content;
+    height: 8rem;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 55%; /* Center vertically */
+    transform: translateY(-45%); /* Adjust to center vertically */
+}
+.aside-sm a{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+}
+.a-whatsapp,
+.a-x,
+.a-facebook,
+.a-instagram,
+.a-gmail{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../../img/whatsapp.png);
+    background-size: cover;
+}
+.a-whatsapp:hover{
+    background-image: url(../../img/whatsapp-color.png);
+}
+.a-x{
+    background-image: url(../../img/x.png);
+}
+.a-x:hover{
+    background-image: url(../../img/x-color.png);
+}
+.a-facebook{
+    background-image: url(../../img/facebook.png);
+}
+.a-facebook:hover{
+    background-image: url(../../img/facebook-color.png);
+}
+.a-instagram{
+    background-image: url(../../img/instagram.png);
+}
+.a-instagram:hover{
+    background-image: url(../../img/instagram-color.png);
+}
+.a-gmail{
+    background-image: url(../../img/gmail.png);
+}
+.a-gmail:hover{
+    background-image: url(../../img/gmail-color.png);
+}
+
+.toTop{
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../../icons/top.png);
+    background-size: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0 2rem 2rem;
+    z-index: 1000;
+}
+
+/* footer */
+.footer-main{
+    width: 100%;
+    height: 55vh;
+    z-index: 1000;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer-contact{
+    width: 100%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.footer-contact-1{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-contact-2{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.value-for-money-text h4,
+.shoppers-worldwide-text h4,
+.fast-delivery-text h4,
+.safe-payments-text h4,
+.buyer-protection-text h4,
+.download-app-text h4{
+    font-family: RobotoMedium;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: var(--lightgray);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+}
+.value-for-money-text p,
+.shoppers-worldwide-text p,
+.fast-delivery-text p,
+.safe-payments-text p,
+.buyer-protection-text p,
+.download-app-text p{
+    font-family: Roboto;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    background-color: transparent;
+    color: var(--lightgray);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+.value-for-money,
+.shoppers-worldwide,
+.fast-delivery,
+.safe-payments,
+.buyer-protection,
+.download-app{
+    width: 17rem;
+    height: 13rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: flex-start;
+    align-content: center;
+}
+.value-for-money-img,
+.shoppers-worldwide-img,
+.fast-delivery-img,
+.safe-payments-img,
+.buyer-protection-img,
+.download-app-img{
+    background-image: url(../../icons/dollar.png);
+    background-size: cover;
+    width: 4rem;
+    height: 4rem;
+    background-position: center;
+    display: block;
+    align-self: center;
+}
+.shoppers-worldwide-img{
+    background-image: url(../../icons/bag.png);
+}
+.fast-delivery-img{
+    background-image: url(../../icons/fast-delivery.png);
+}
+.safe-payments-img{
+    background-image: url(../../icons/payment-protection.png);
+}
+.buyer-protection-img{
+    background-image: url(../../icons/guarantee.png);
+}
+.download-app-img{
+    background-image: url(../../icons/install.png);
+}
+.download-options{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.download-options p{
+    font-family: RobotoBold;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--lightgray);
+    text-transform: uppercase;
+    text-align: left;
+    display: flex;
+    align-self: center;
+    margin: 2rem;
+}
+.play-store,
+.app-store{
+    background-image: url(../../icons/play.png);
+    background-size: cover;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 2rem;
+}
+.app-store{
+    background-image: url(../../icons/app-store.png);
+}
+.pay-option{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.pay-option p{
+    font-family: RobotoBold;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--lightgray);
+    text-align: left;
+    display: flex;
+    margin: 1rem;
+    text-transform: uppercase;
+    align-self: center;
+}
+.visa,
+.mastercard,
+.paypal,
+.google-pay,
+.apple-pay,
+.american-express{
+    display: block;
+    background-image: url(../../icons/visa.png);
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+.mastercard{
+    background-image: url(../../icons/shopping.png);
+}
+.paypal{
+    background-image: url(../../icons/paypal.png);
+}
+.google-pay{
+    background-image: url(../../icons/google-pay.png);
+}
+.apple-pay{
+    background-image: url(../../icons/apple-pay.png);
+}
+.american-express{
+    background-image: url(../../icons/american-express.png);
+}
+
+
+.footer-message{
+    width: 100%;
+    margin: 2rem;
+    justify-content: center;
+    align-content: center;
+}
+.footer-message h3{
+    font-family: RobotoSlabBold;
+    font-size: 2rem;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--lightyellow);
+    margin: 2rem 5rem 2rem 2rem;
+}
+.footer-message input{
+    background-color: var(--lightyellow);
+}
+.footer-message textarea{
+    background-color: var(--lightyellow);
+}
+.footer-message .name,
+.footer-message .email,
+.footer-message .no_phone{
+    display: flex;
+    width: 30%;
+    height: 3rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.footer-message .email{
+    width: 40%;
+}
+.footer-message .no_phone{
+    width: 35%;
+}
+.footer-message .messagebox{
+    display: flex;
+    width: 70%;
+    margin: 2rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+}
+.footer-message .btn{
+    display: flex;
+    width: 23%;
+    height: 4rem;
+    border-radius: 2rem;
+    font-family: RobotoSlabMedium;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 2.5rem;
+    color: var(--lightyellow);
+    background-color: var(--darkgray);
+    border: 0.1rem solid var(--lightyellow);
+    cursor: pointer;
+}
+.footer-message .btn:hover{
+    border: 0.1rem solid var(--black);
+    color: var(--black);
+}
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    .wrapper-gallery{
+        margin: 0 4.5vw;
+    }
+    .wrapper-anime{
+        margin: 0 4.5vw;
+    }
+    
+    /* header */
+    .header-main{
+        padding: 0 2rem;
+    }
+    .header-main nav ul{
+        display: none;
+    }
+    .header-main nav{
+        flex: 0 0 7rem;
+    }
+    .shop_logo {
+        height: 5.5rem;
+        margin-top: 2.55rem;
+    }
+    .shop_logo img{
+        height: 55%;
+    }
+    .search{
+        display: none;
+    }
+    .register{
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 3rem;
+    }
+    .register a{
+        margin: 1rem 1.1rem;
+    }
+    .login{
+        width: 7rem;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    .singup{
+        width: 7rem;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    .burger-menu-btn{
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background-image: url(../../icons/menu-burger.png), url(../../icons/cross.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 5rem;
+        cursor: pointer;
+        align-self: center;
+    }
+    .burger-menu{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: var(--lightyellow);
+    }
+    
+    .burger-menu nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: calc(80vh - 6rem);
+    }
+    .burger-menu nav ul li{
+        flex-basis: 100%;
+        height: calc(100% / var(--menu-count));
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.5rem solid var(--darkgray);
+    }
+    .burger-menu nav ul li a{
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        flex-basis: 100%;
+        text-align: center;
+        padding: 5rem 0 0 0;
+        font-family: RobotoSlabMedium;
+        color: var(--darkgray);
+        border-radius: 2rem;
+        align-self: center;
+    }
+    .burger-menu nav ul li a:hover{
+        color: var(--black);
+    }
+    .burger_search{
+        width: 100%;
+        height: 25vh;
+        background-color: var(--lightdarkgray);
+    }
+    .burger_search form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .burger_search input{
+        display: flex;
+        width: fit-content;
+        height: 4rem;
+        background-color: var(--lightyellow);
+        margin: 3rem 0 0 1rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+        font-size: 1.7rem;
+        font-family: RobotoSlabMedium;
+    }
+    .burger_search input:focus{
+        border: 0.1rem solid var(--black);
+    }
+    .burger_search button{
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        margin: 3rem 1rem 0;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+
+    /* footer */
+    .footer-main{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-contact{
+        height: 50%;
+    }
+    .footer-contact-1{
+        display: none;
+    }
+    .footer-contact-2{
+        display: none;
+    }
+    .download-options p{
+        font-size: 1.5rem;
+    }
+    .play-store,
+    .app-store{
+        width: 3rem;
+        height: 3rem;
+    }
+    .pay-option p{
+        font-size: 1.2rem;
+        margin: 0 0 0 1rem;
+        flex-wrap: wrap;
+    }
+    .visa,
+    .mastercard,
+    .paypal,
+    .google-pay,
+    .apple-pay,
+    .american-express{
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+    }
+    .footer-message{
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-message h3{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .footer-message .name,
+    .footer-message .email,
+    .footer-message .no_phone{
+        width: 80%;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        padding-left: 2rem;
+    }
+    .footer-message .email{
+        width: 100%;
+    }
+    .footer-message .no_phone{
+        width: 90%;
+    }
+    .footer-message .messagebox{
+        width: 100%;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        padding-left: 2rem;
+    }
+    .footer-message .btn{
+        width: 65%;
+        height: 4rem;
+        font-size: 1.2rem;
+        margin: 2rem 4rem;
+    }
+
+    /* aside social media */
+    .a-whatsapp,
+    .a-x,
+    .a-facebook,
+    .a-instagram,
+    .a-gmail{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .toTop{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    .wrapper-gallery{
+        margin: 0 3vw;
+    }
+    .wrapper-anime{
+        margin: 0 3vw;
+    }
+    /* header */
+    .header-main{
+        padding: 0 1rem;
+    }
+    .header-main nav{
+        flex: 3 0 5rem;
+    }
+    .shop_logo {
+        height: 4rem;
+        margin: 0.7rem 0 0 0.5rem;
+        flex-grow: 1;
+    }
+    .header-main nav ul{
+        flex-grow: 1;
+        padding-left: 0.5rem;
+        margin: 0 0.5rem;
+    }
+    .header-main nav ul li a{
+        padding: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .search{
+        flex: 2 0 5rem;
+    }
+    .search form{
+        margin-right: 0.5rem;
+    }
+    .search input{
+        width: 40%;
+        font-size: 1rem;
+    }
+    .register{
+        flex: 1 0 5rem;
+    }
+    .register a{
+        margin: 1rem 0.5rem 1rem 0.7rem;
+    }
+    .login,
+    .singup{
+        width: 5.5rem;
+        border-radius: 1rem;
+        font-size: 1.1rem;
+    }
+    /* footer */
+    .footer-main{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-contact{
+        height: 50%;
+    }
+    .footer-contact-1{
+        display: none;
+    }
+    .footer-contact-2{
+        display: none;
+    }
+    .download-options p{
+        font-size: 1.8rem;
+    }
+    .play-store,
+    .app-store{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .pay-option p{
+        font-size: 1.8rem;
+        margin: 0 1rem;
+        flex-wrap: wrap;
+    }
+    .visa,
+    .mastercard,
+    .paypal,
+    .google-pay,
+    .apple-pay,
+    .american-express{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0.5rem;
+    }
+    .footer-message{
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-message h3{
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .footer-message .name,
+    .footer-message .email,
+    .footer-message .no_phone{
+        width: 80%;
+        margin: 2rem 0;
+        font-size: 1.4rem;
+        padding-left: 2rem;
+    }
+    .footer-message .email{
+        width: 100%;
+    }
+    .footer-message .no_phone{
+        width: 90%;
+    }
+    .footer-message .messagebox{
+        width: 100%;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        padding-left: 2rem;
+        height: 35%;
+    }
+    .footer-message .btn{
+        width: 50%;
+        height: 4rem;
+        font-size: 1rem;
+        margin: 2rem 7rem;
+    }
+    /* aside social media */
+    .a-whatsapp,
+    .a-x,
+    .a-facebook,
+    .a-instagram,
+    .a-gmail{
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    .toTop{
+        width: 3.7rem;
+        height: 3.7rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    .wrapper-gallery{
+        margin: 0 2vw;
+    }
+    .wrapper-anime{
+        margin: 0 2vw;
+    }
+    /* header */
+    .header-main{
+        padding: 0 1rem;
+    }
+    .header-main nav{
+        flex: 3 0 5rem;
+    }
+    .shop_logo {
+        height: 4.5rem;
+        margin: 0.8rem 0 0 0.5rem;
+        flex-grow: 1;
+    }
+    .header-main nav ul{
+        flex-grow: 1;
+        padding-left: 0.5rem;
+        margin: 0 0.5rem;
+    }
+    .header-main nav ul li a{
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    .search{
+        flex: 2 0 5rem;
+    }
+    .search form{
+        margin-right: 0.5rem;
+    }
+    .search input{
+        width: 40%;
+        font-size: 1.2rem;
+    }
+    .register{
+        flex: 1 0 5rem;
+    }
+    .register a{
+        margin: 1rem 0.5rem 1rem 0.7rem;
+    }
+    .login,
+    .singup{
+        width: 5.5rem;
+        border-radius: 1rem;
+        font-size: 1.1rem;
+    }
+    /* footer */
+    .footer-main{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-contact{
+        margin: 1rem 0 0 0;
+        flex-direction: row;
+    }
+    .footer-contact-1{
+        margin: 0 -1rem;
+        flex-direction: column;
+    }
+    .footer-contact-2{
+        flex-direction: column;
+        margin: 0 -1rem;
+    }
+    .value-for-money-text h4,
+    .shoppers-worldwide-text h4,
+    .fast-delivery-text h4,
+    .safe-payments-text h4,
+    .buyer-protection-text h4,
+    .download-app-text h4{
+        font-size: 0.8rem;
+    }
+    .value-for-money-text p,
+    .shoppers-worldwide-text p,
+    .fast-delivery-text p,
+    .safe-payments-text p,
+    .buyer-protection-text p,
+    .download-app-text p{
+        font-size: 0.5rem;
+    }
+    .value-for-money,
+    .shoppers-worldwide,
+    .fast-delivery,
+    .safe-payments,
+    .buyer-protection,
+    .download-app{
+        width: 10rem;
+        height: 7rem;
+        flex-direction: row;
+        margin: 0.5rem;
+        justify-content: center;
+    }
+    .value-for-money-img,
+    .shoppers-worldwide-img,
+    .fast-delivery-img,
+    .safe-payments-img,
+    .buyer-protection-img,
+    .download-app-img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .download-options{
+        align-items: center;
+        margin: 0 -1rem;
+    }
+    .download-options p{
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    .play-store,
+    .app-store{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.8rem;
+    }
+    .pay-option{
+        align-items: center;
+    }
+    .pay-option p{
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    .visa,
+    .mastercard,
+    .paypal,
+    .google-pay,
+    .apple-pay,
+    .american-express{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.24rem;
+    }
+    .footer-message{
+        margin: 1rem 0 0;
+    }
+    .footer-message h3{
+        font-size: 1.8rem;
+    }
+    .footer-message .name,
+    .footer-message .email,
+    .footer-message .no_phone{
+        margin-left: 3rem;
+        padding-left: 2.2rem;
+        margin-top: -1rem;
+    }
+    .footer-message .messagebox{
+        margin-left: 3rem;
+        padding-left: 2.2rem;
+        margin-top: -1rem;
+    }
+    .footer-message .btn{
+        width: 17%;
+        font-size: 1.1rem;
+        margin-left: 3.5rem;
+        margin-top: 0rem;
+    }
+    /* aside social media */
+    .a-whatsapp,
+    .a-x,
+    .a-facebook,
+    .a-instagram,
+    .a-gmail{
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+    .toTop{
+        width: 3.7rem;
+        height: 3.7rem;
+    }    
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    .wrapper-gallery{
+        margin: 0 2vw;
+    }
+    .wrapper-anime{
+        margin: 0 2vw;
+    }
+    /* header */
+    .header-main{
+        padding: 0 2rem;
+    }
+    .header-main nav{
+        flex: 3 0 5rem;
+    }
+    .shop_logo {
+        height: 4.5rem;
+        margin: 0.8rem 0 0 0.5rem;
+        flex-grow: 1;
+    }
+    .header-main nav ul{
+        flex-grow: 1;
+        padding-left: 0.5rem;
+        margin: 0 0.5rem;
+    }
+    .header-main nav ul li a{
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    .search{
+        flex: 2 0 5rem;
+    }
+    .search form{
+        margin-right: 0.5rem;
+    }
+    .search input{
+        width: 50%;
+        font-size: 1.2rem;
+    }
+    .register{
+        flex: 1 0 5rem;
+    }
+    .register a{
+        margin: 1rem 0.5rem 1rem 0.7rem;
+    }
+    .login,
+    .singup{
+        width: 6rem;
+        border-radius: 1.8rem;
+        font-size: 1rem;
+        height: 2.3rem;
+        align-self: center;
+    }
+
+    /* footer */
+    .footer-main{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .footer-contact{
+        margin: 1rem 0 0 0;
+        flex-direction: row;
+    }
+    .footer-contact-1{
+        margin: 0 -1rem;
+        flex-direction: column;
+    }
+    .footer-contact-2{
+        flex-direction: column;
+        margin: 0 -1rem;
+    }
+    .value-for-money-text h4,
+    .shoppers-worldwide-text h4,
+    .fast-delivery-text h4,
+    .safe-payments-text h4,
+    .buyer-protection-text h4,
+    .download-app-text h4{
+        font-size: 0.9rem;
+    }
+    .value-for-money-text p,
+    .shoppers-worldwide-text p,
+    .fast-delivery-text p,
+    .safe-payments-text p,
+    .buyer-protection-text p,
+    .download-app-text p{
+        font-size: 0.6rem;
+    }
+    .value-for-money,
+    .shoppers-worldwide,
+    .fast-delivery,
+    .safe-payments,
+    .buyer-protection,
+    .download-app{
+        width: 12rem;
+        height: 8rem;
+        flex-direction: row;
+        margin: 0.5rem;
+        justify-content: center;
+    }
+    .value-for-money-img,
+    .shoppers-worldwide-img,
+    .fast-delivery-img,
+    .safe-payments-img,
+    .buyer-protection-img,
+    .download-app-img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .download-options{
+        align-items: center;
+        margin: 0 -1rem;
+    }
+    .download-options p{
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+    .play-store,
+    .app-store{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.8rem;
+    }
+    .pay-option{
+        align-items: center;
+    }
+    .pay-option p{
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+    .visa,
+    .mastercard,
+    .paypal,
+    .google-pay,
+    .apple-pay,
+    .american-express{
+        width: 2.3rem;
+        height: 2.3rem;
+        margin: 0.24rem;
+    }
+    .footer-message{
+        margin: 0;
+    }
+    .footer-message h3{
+        font-size: 1.7rem;
+    }
+    .footer-message .name,
+    .footer-message .email,
+    .footer-message .no_phone{
+        margin-left: 3rem;
+        padding-left: 2.2rem;
+        margin-top: -1rem;
+    }
+    .footer-message .messagebox{
+        margin-left: 3rem;
+        padding-left: 2.2rem;
+        margin-top: -1rem;
+    }
+    .footer-message .btn{
+        width: 17%;
+        font-size: 1.1rem;
+        margin-left: 3.5rem;
+        margin-top: 0;
+    }
+
+    /* aside social media */
+    .a-whatsapp,
+    .a-x,
+    .a-facebook,
+    .a-instagram,
+    .a-gmail{
+        width: 3rem;
+        height: 3rem;
+    }
+    .toTop{
+        width: 4rem;
+        height: 4rem;
+    }  
+}
+@media only screen and (min-width: 1200px) and (max-width: 1499px){
+    /* header */
+    .header-main{
+        padding: 0 3rem;
+    }
+    .search input{
+        width: 40rem;
+    }
+    .register a{
+        margin: 1rem 1.75rem;
+    }
+
+    /* footer */
+    .footer-contact{
+        margin: 0;
+    }
+    .value-for-money-text h4,
+    .shoppers-worldwide-text h4,
+    .fast-delivery-text h4,
+    .safe-payments-text h4,
+    .buyer-protection-text h4,
+    .download-app-text h4{
+        font-size: 1.5rem;
+    }
+    .value-for-money-text p,
+    .shoppers-worldwide-text p,
+    .fast-delivery-text p,
+    .safe-payments-text p,
+    .buyer-protection-text p,
+    .download-app-text p{
+        font-size: 0.8rem;
+    }
+    .value-for-money-img,
+    .shoppers-worldwide-img,
+    .fast-delivery-img,
+    .safe-payments-img,
+    .buyer-protection-img,
+    .download-app-img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .footer-message h3{
+        font-size: 2rem;
+        margin: 2rem;
+    }
+    .footer-message .name,
+    .footer-message .email,
+    .footer-message .no_phone{
+        padding-left: 1.5rem;
+    }
+    .footer-message .email{
+        width: 45%;
+    }
+    .footer-message .no_phone{
+        width: 43%;
+    }
+    .footer-message .messagebox{
+        padding-left: 1.5rem;
+    }
+    .footer-message .btn{
+        width: 30%;
+        font-size: 1.2rem;
+        margin-left: 2.5rem;
+    }
+}

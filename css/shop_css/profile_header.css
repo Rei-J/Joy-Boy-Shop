@@ -1,0 +1,632 @@
+/* user profile header */
+.profile_header nav{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background-color: var(--lightyellow);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.btn-aside-menu{
+    display: flex;
+    height: 100%;
+    align-self: center;
+    background-image: url(../../icons/menu-burger.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    cursor: pointer;
+    flex: 1 0 5%;
+}
+.profile_logo{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex: 1 0 5%;
+}
+.profile_logo img{
+    height: 80%;
+    align-self: center;
+    border-radius: 0.7rem;
+}
+.profile_search{
+    display: flex;
+    height: 100%;
+    flex: 2 0 85%;
+    justify-content: right;
+    align-items: center;
+}
+.profile_search form{
+    width: fit-content;
+    height: 90%;
+    margin-right: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0 1rem;
+    border-radius: 2.5rem;
+    border: 0.2rem solid var(--black);
+}
+.profile_search form input{
+    width: 35rem;
+    height: 3rem;
+    align-self: center;
+    display: flex;
+    padding-left: 1rem;
+    margin-left: -0.9rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    font-family: RobotoSlab;
+    font-size: 1.2rem;
+    background-color: var(--gray2);
+    color: var(--lightgray);
+}
+.profile_search form input:focus{
+    background-color: var(--gray3);
+    border: 0.1rem solid var(--gray3);
+    transition: all 0.3s ease-in-out;
+}
+.profile_search form button{
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    margin-right: -1rem;
+    border: 0.1rem solid transparent;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.profile_search button img{
+    height: 2.5rem;
+    padding: 0 1rem 0 0.5rem;
+}
+.user_settings{
+    display: flex;
+    height: 100%;
+    flex: 1 0 5%;
+    background-image: url(../../icons/account.png);
+    background-repeat: no-repeat;
+    background-size: 42%;
+    background-position: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* user info/drop menu */
+.user_menu{
+    display: none;
+    flex-direction: column;
+    width: 20rem;
+    height: 24.5rem;
+    margin-right: 1.5rem;
+    background-color: var(--darkgray);
+    position: fixed;
+    top: 6.7%;
+    right: 0;
+    align-self: center;
+    border: 0.15rem solid var(--gray2);
+    border-radius: 1rem;
+    z-index: 1000;
+}
+.user_menu ul{
+    width: 100%;
+}
+.user_menu li{
+    border-bottom: 0.1rem solid var(--gray2);
+}
+.user_menu li:nth-child(1){
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+.user_menu li:hover{
+    background-color: var(--gray2);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+.user_menu li a{
+    display: block;
+    height: 4rem;
+    margin: 0 0.5rem;
+    padding: 1rem 0;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+    color: var(--lightyellow);
+}
+.first{
+    background-image: url(../../icons/profile.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 10%;
+    text-align: center;
+    text-transform: lowercase;
+}
+.second,
+.third,
+.cart_shop,
+.order_shop{
+    background-image: url(../../icons/setting.png), url(../../icons/right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: left, right;
+    background-size: 10%;
+    text-align: center;
+}
+.cart_shop{
+    background-image: url(../../icons/shopping-cart.png), url(../../icons/right-arrow.png);
+}
+.order_shop{
+    background-image: url(../../icons/shopping-bag.png), url(../../icons/right-arrow.png);
+}
+.third{
+    background-image: url(../../icons/remove-user.png), url(../../icons/right-arrow.png);
+}
+.user_menu form{
+    width: 100%;
+    height: 4.1rem;
+    background-image: url(../../icons/logout.png);
+    background-position: calc(20rem - 19.5rem);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.logout-btn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+    color: var(--lightyellow);
+}
+.user_menu form:hover{
+    background-color: var(--gray2);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+/* change the username popup */
+.change_username,
+.delete_user{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;/**/
+    justify-content: center;
+    align-items: center;
+    z-index: 1005;
+}
+.close_change_username,
+.close_delete_user{
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--lightgray);
+    background-image: url(../../icons/circle-xmark-bold.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 30%;
+    right: 36.5%;
+    border: 0.1rem solid var(--gray3);
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+.change_username form,
+.delete_user form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--gray2);
+    color: var(--lightyellow);
+    line-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-gray);
+}
+.change_username form h2,
+.delete_user form h2{
+    font-family: RobotoSlab;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--lightyellow);
+}
+.change_username form input,
+.delete_user form input{
+    display: flex;
+    width: 24rem;
+    height: 3rem;
+    background-color: var(--lightyellow);
+    color: var(--darkgray);
+    padding-left: 1rem;
+    font-family: RobotoSlabMedium;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+.change_username form input:focus,
+.delete_user form input:focus{
+    border: 0.2rem solid var(--darkgray);
+}
+.save-btn{
+    width: 7rem;
+    height: 3rem;
+    background-color: transparent;
+    color: var(--lightyellow);
+    border: 0.1rem solid var(--lightyellow);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: RobotoSlabMedium;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.save-btn:hover{
+    transform: scale(1.05);
+    transition: all 200ms ease-in-out;
+}
+
+/* aside menu */
+.aside-menu{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: calc(100vh - 4rem);
+    background-color: transparent;
+    list-style: none;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    border-right: 0.1rem solid var(--gray2);
+}
+.aside-menu ul{
+    visibility: hidden;
+}
+.aside-menu span{
+    font-family: RobotoSlabBold;
+    font-size: 1.6rem;
+    color: var(--yellowgray);
+    text-decoration: underline 0.2rem solid var(--yellowgray);
+}
+.aside-menu li{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom: 0.1rem solid var(--gray2);
+}
+.aside-menu li:hover{
+    background-color: var(--gray2);
+    border: 0.1rem solid var(--darkgray);
+    transition: all 0.5s ease-in-out;
+}
+.aside-menu li:nth-child(1):hover{
+    background-color: transparent;
+    border: none;
+    transition: none;
+    cursor: default;
+}
+.aside-menu li a{
+    display: block;
+}
+.aside-menu li:nth-child(2) a,
+.aside-menu li:nth-child(3) a,
+.aside-menu li:nth-child(4) a,
+.aside-menu li:nth-child(5) a,
+.aside-menu li:nth-child(6) a,
+.aside-menu li:nth-child(7) a,
+.aside-menu li:nth-child(8) a{
+    background-image: url(../../img/facebook-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2.7rem;
+    height: 2.7rem;
+}
+.aside-menu li:nth-child(3) a{
+    background-image: url(../../img/instagram-color.png);
+}
+.aside-menu li:nth-child(4) a{
+    background-image: url(../../img/whatsapp-color.png);
+}
+.aside-menu li:nth-child(5) a{
+    background-image: url(../../img/x-color.png);
+}
+.aside-menu li:nth-child(6) a{
+    background-image: url(../../img/gmail-color.png);
+}
+.aside-menu li:nth-child(7) a{
+    background-image: url(../../img/tiktok.png);
+}
+.aside-menu li:nth-child(8) a{
+    background-image: url(../../img/linkedin.png);
+}
+/* username */
+.userlogin{
+    width: 98%;
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0.1rem solid var(--gray2);
+    border-radius: 2rem;
+    visibility: hidden;
+}
+.userlogin:hover{
+    background-color: var(--gray2);
+    border: 0.1rem solid var(--darkgray);
+    transition: all 0.5s ease-in-out;
+}
+.ulogo{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    background-image: url(../../icons/account.png);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center;
+    cursor: pointer;
+}
+.uname{
+    width: 7rem;
+    height: 4rem;
+    display: flex;
+    cursor: pointer;
+}
+.uname h3{
+    font-family: RobotoSlabMedium;
+    font-size: 0.95rem;
+    align-self: center;
+    color: var(--lightgray);
+}
+
+
+
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    /* user profile header */
+    .btn-aside-menu{
+        display: none;
+    }
+    .profile_logo{
+        flex: 1 0 15%;
+    }
+    .profile_logo img{
+        height: 70%;
+    }
+    .profile_search{
+        flex: 1 0 70%;
+        justify-content: center;
+    }
+    .profile_search form{
+        width: 80%;
+        height: 70%;
+        margin-right: 0;
+    }
+    .profile_search form input{
+        width: 100%;
+        height: 2.2rem;
+    }
+    .profile_search form button{
+        border-top-right-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+    .profile_search button img{
+        height: 1.8rem;
+        border-radius: 1rem;
+    }
+    .user_settings{
+        flex: 1 0 15%;
+        background-size: 40%;
+    }
+    /* change the username popup */
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 10%;
+    }
+    .change_username form,
+    .delete_user form{
+        width: 27rem;
+    }
+    .change_username form h2,
+    .delete_user form h2{
+        font-size: 1rem;
+    }
+    .change_username form input,
+    .delete_user form input{
+        width: 75%;
+        height: 2.7rem;
+        margin: 1rem 0;
+    }
+    .change_username form input:focus,
+    .delete_user form input:focus{
+        border: 0.1rem solid var(--darkgray);
+    }
+    .save-btn{
+        width: 25%;
+        height: 2.5rem;
+    }
+    /* aside menu */
+    .aside-menu{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+     /* user profile header */
+     .btn-aside-menu{
+        display: none;
+    }
+    .profile_logo{
+        flex: 1 0 15%;
+    }
+    .profile_logo img{
+        height: 70%;
+    }
+    .profile_search{
+        flex: 1 0 70%;
+        justify-content: center;
+    }
+    .profile_search form{
+        width: 80%;
+        height: 70%;
+        margin-right: 0;
+    }
+    .profile_search form input{
+        width: 100%;
+        height: 2.2rem;
+    }
+    .profile_search form button{
+        border-top-right-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+    .profile_search button img{
+        height: 1.8rem;
+        border-radius: 1rem;
+    }
+    .user_settings{
+        flex: 1 0 15%;
+        background-size: 32%;
+    }
+
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 20%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* user profile header */
+    .btn-aside-menu{
+        display: none;
+    }
+    .profile_logo{
+        flex: 1 0 10%;
+    }
+    .profile_search{
+        flex: 1 0 80%;
+    }
+    .profile_search form{
+        width: 50%;
+        height: 70%;
+        margin-right: 0;
+    }
+    .profile_search form input{
+        width: 100%;
+        height: 2.2rem;
+    }
+    .profile_search form button{
+        border-top-right-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+    .profile_search button img{
+        height: 1.8rem;
+        border-radius: 1rem;
+    }
+    .user_settings{
+        flex: 1 0 10%;
+        background-size: 35%;
+    }
+
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 25%;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 32.5%;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    /* user profile header */
+    .btn-aside-menu{
+        display: flex;
+    }
+    .profile_logo{
+        flex: 1 0 5%;
+    }
+    .profile_logo img{
+        height: 80%;
+    }
+    .profile_search{
+        flex: 2 0 85%;
+        justify-content: right;
+    }
+    .profile_search form{
+        width: fit-content;
+        height: 90%;
+        margin-right: 1rem;
+    }
+    .profile_search form input{
+        width: 35rem;
+        height: 3rem;
+    }
+    .profile_search form button{
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+    .profile_search button img{
+        height: 2.5rem;
+    }
+    .user_settings{
+        flex: 1 0 5%;
+        background-size: 42%;
+    }
+    /* change the username popup */
+    .close_change_username,
+    .close_delete_user{
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 36.5%;
+    }
+    .change_username form,
+    .delete_user form{
+        width: 30rem;
+    }
+    .change_username form h2,
+    .delete_user form h2{
+        font-size: 1.2rem;
+    }
+    .change_username form input,
+    .delete_user form input{
+        width: 24rem;
+        height: 3rem;
+        margin: 1.5rem 0;
+    }
+    .change_username form input:focus,
+    .delete_user form input:focus{
+        border: 0.2rem solid var(--darkgray);
+    }
+    .save-btn{
+        width: 7rem;
+        height: 3rem;
+    }
+    .save-btn:hover{
+        transform: scale(1.05);
+        transition: all 200ms ease-in-out;
+    }
+}

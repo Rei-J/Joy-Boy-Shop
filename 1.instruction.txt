@@ -1,0 +1,77 @@
+1. Ne folderin "database file", ndodhet file i database qe duhet ngarkuar ne XAMPP.
+2. Projekti permban nje portofol dhe nje shop.
+Projektin mund ta fillosh ta shohesh qe nga portofoli dhe nga aty mund te vazhdosh me tej per te pare
+shop-in. Nqs e fillon nga portofoli ndiq kete url(http://localhost/Project1/index.html)
+dhe per te vazhduar per te pare shop-in, shko te menuja e portofolit-opsioni 'projektet'.
+Nqs deshiron ta shohesh shop-in vec, url(http://localhost/Project1/shop_index.php).
+Projekti pervec PC version eshte i pershtatur dhe ne keto dimensione : 
+(mobile version < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min)).
+-Shop-i tregon tere njohurite e mia per sa i perket WEB DEV.
+*Shop-i e ka emrin 'JoyBoy'.
+Ne projekt vetem dicka nuk funksionon qe eshte "search bar" ne kete file "index.html", per arsye se sic e permenda dhe me lart
+ky projekt eshte bere me synim per te perfshire tere njohurite e mia, dhe ky file ne fillim ka qene nje mini projekt tjeter
+qe ishte nje galeri me foto dhe kur klikohej fotua hapej versioni ose madhesia origjinale e fotos, dhe "search bar" atehere ka
+qene thjesht per pamje, dhe tere fotot jane te ngarkuara si background img dhe jo me database, dhe kur mendova ta perfshije ne projekt
+si faqe te pare te shop-it bera tere ndryshimet e nevojshme pervec "search bar-it" sepse nqs duhet ta ndryshoja dhe ate, duhet te ndryshoja tere 
+sistemin e faqes dhe vendosa ta le sic eshte me qellim qe te ruaja iden e projekti qe ishte, pra nje galleri me foto.
+Shop-i eshte i ndertuar me iden per te shitur filma online, faqa e pare permban thjesht nje informacion per userin qe ta bej me dije,
+useri aty mund te shohi disa nga filmat qe permban shop-i dhe pak informacion per te. Nqs useri vendos te blej nje film ai duhet te krijoj
+nje account ne website. Ku mund te shkoj tek "signup", dhe te krijoj accountin e tij. Kam perfshire dhe 'some security' ne 
+"signup" dhe "login" system, qe jane : 
+1.per sa i perket "signup":
+-userit i lejohet vetem shkronja dhe hapsire kur plotson te dhenat e tij,
+-useri nuk mund te avancoj me tej duke lene 'empty inputs',
+-kontrollohet nqs email eshte invalid,
+-kontrollohet nqs nje user me te njejtin emer dhe mbiemer ne te njejten kohe eshte i rregjistruar,
+-kontrollohet gjithashtu nqs email eshte i rregjistruar.
+2.per sa i perket "login":
+-userit nuk mund te avancoj me tej duke lene 'empty inputs',
+-email i gabuar,
+-password i gabuar.
+Keto errore nuk behen display ne website per arsye qe userit duhet ti japim sa me pak info te jete e mundur per arsye sigurie,
+por nqs deshiron ti shohesh dhe ne website shko ne filet "signup.php" qe ti besh remove komentit dhe ta lesh ne gjendje normale 
+thirrjen e funksionit gjithashtu dhe te "signup_view.php" ti besh remove komentit nga vete funksioni, dhe me pas mund ta testosh 
+ne website, dhe nqs ben errore do te shfaqen ne formen e "alertit", te njejten gje mund te besh dhe me "login.php" & "login_view.php". 
+Tek "signup.php" kam bere te mundur qe nqs gjate plotsimit te rregjistrimit useri ben dicka gabim, emri dhe mbiemri te mbetet 
+dhe mos ta shkruaj perseri emrin dhe mbiemrin gjate plotsimit per tu rregjistruar, *por vetem emri&mbiemeri dhe *vetem tek "signup".
+Mbas rregjistrimit dhe mbas logimit, ne faqen e userit "profile.php", fillimisht nuk do ket asnje produkt per arsye se duhet te shkoni
+ne url(http://localhost/Project1/admin_login.php) ose url(http://localhost/Project1/admin_signup.php), kjo eshte faqa e adminit qe
+kontrollon gjithcka per sa i perket shop-it, sistemit i rregjistrimit dhe logimit funksionon ne te njejten menyre si useri dhe per sa i
+perket 'security-it'.Ne faqen e admin duhet te shkoni tek 'products' dhe aty duhet te ngarkoni tere produketet nga folderi "upload_img_products",
+dhe mund ti vendosni emrin, cmimin produktit. Qe me pas ti shfaqet userit, aty mund te ngarkoni sa produkte te duash, ose ti
+ndryshosh emrin nje produkti ose ta fshish nje produkt. Gjithashtu emri i produktit qe do ti vendosesh do te sherbej dhe per sa
+i perket "search bar-it" brenda ne faqen e userit, qe ne kete rast punon, sepse cdo gje eshte e ngarkuar ne database dhe mund ti besh search, 
+nje produkt fiks me emrin qe i vendoset. Tek faqa e userit sapo te shfaqen produketet pas ngarkimit nga admini, mund te selektosh 
+sa produkte te nevojitem dhe shkojne direkt te 'karta e shopit', pasi te mbarosh me selektimin, te menuja ne te djatht-lart kliko dhe shko te 'cart',
+aty mund ti fshish tere produktet e selektuara ose te vazhdosh perseri me selektimi te fq kryesore ose mund te vazhdosh me 'checkout'.
+Ne checkout do te gjesh tere info per cfare useri ka vendos te blej, dhe i duhet te plotsoj te dhenat per te vazhduar me tej.
+Ne plotsimin e te dhenave perseri ka 'security':
+-lejohet vetem shkronja, numra dhe hapsira,
+-nuk lejohet empty inputs,
+-kontrollohet nqs eshte emri i sakt i userit,
+-kontrollohet nqs eshte emaili i sakt i userit,
+dhe nqs email eshte invalid ose jo.
+Vepro ne te njejten menyre per te testuar erroret: "checkout.php" & "checkout_view.php".
+Pas plotsimit me sukses te te dhenave porosia eshte derguar tek admini, dhe te useri porosia do te jete me statusin "pending".
+Tek admini te 'orders', atje mund te kryhesh veprimet e nevojshme si psh ta besh statusin e porosis "completed" dhe ketu perfundon dhe ideja e shit-blerjes, e njejta gje
+do i shfaqet dhe userit,... ose te fshije accountin e nje useri ose te shohesh mesazhet e derguara nga useri.
+Tek admini gjithashtu ndodhet dhe "dashboard", i cili mban tere infon e nevojshme per sa i perket shop-it.
+Ne te dyja rastet si tek useri dhe te admini, perdoruesi mund te ndryshoj emrin ose passwordin e accountit, te cilat me pas ndryshohen dhe
+ne database dhe gjithashtu mund te fshij accountin e tij.
+Per sa i perket mesazheve, useri nuk mund te dergoj mesazhe pa krijuar nje account te tij me pare, dhe kete gje mund te testohet tek "index.html".
+Ketu gjithashtu ka "security":
+-lejohet vetem shkronja, numra dhe hapsira,
+-nuk lejohet empty inputs,
+-emaili i sakt,
+dhe kontrollohet nqs emaili i userit eshte invalid.
+
+Kam vendosur gjithashtu security dhe per "session-in", kam vendosur rigjenerimin e session id me kohe 30 min, dhe me pak fjale
+session id do te rigjenerohet cdo 30 min dhe kjo do te bej qe accounti i userit te bej logout ne menyre automatike,
+dhe userit i duhet te loggohet perseri. file "config_session.php".
+
+
+*Nje permbledhje e aftesive te mia:
+HTML,CSS,PHP,krijimin e database dhe lidhja me website-in i kam punuar vete, persa i perket JavaScript di gjuhen bazat por me eshte dashur dhe ndihma e internetit
+te krijoja idene qe kisha.
+Persa i perket WordPress, kam punuar website te ndryshme, si website duke filluar nga zero dhe kam ndertuar tere website-in, por edhe me template te gatshme dhe
+me pas modifikimin e tyre.

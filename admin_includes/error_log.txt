@@ -1,0 +1,1 @@
+Error: [2] Undefined variable $pdo - C:\xampp\htdocs\Project1\admin_includes\updateProducts.inc.php:20

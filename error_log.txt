@@ -1,0 +1,32 @@
+Error: [2] Undefined variable $conn - C:\xampp\htdocs\Project1\admin_products.php:102Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] unlink(upload_img_products/dragon ball super.jpg): No such file or directory - C:\xampp\htdocs\Project1\admin_products.php:38
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_index.php:18
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17
+Error: [2] Undefined array key "admin_user_id" - C:\xampp\htdocs\Project1\admin_products.php:17

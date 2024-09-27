@@ -1,0 +1,590 @@
+/* fonts */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../fonts/Roboto\ Slab/RobotoSlab-Light.ttf);
+}
+@font-face {
+    font-family: RobotoSlabMedium;
+    src: url(../fonts/Roboto\ Slab/RobotoSlab-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoSlabBold;
+    src: url(../fonts/Roboto\ Slab/RobotoSlab-Bold.ttf);
+}
+
+/* html/root */
+:root{
+    --white: #fff;
+    --lightgray: #ddd;
+    --darkgray: #1e1e1e;
+    --lightdarkgray: #3b3b3b;
+    --black: #000;
+    --red: red;
+    --yellow: yellow;
+    --green: green;
+    --purple: purple;
+    --orange: orange;
+    --blue: blue;
+    --menu-count: 4;  /* list items */
+    --sub-menu-count: 2;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--darkgray);
+}
+
+/*reload the content before to remove the flicker of the image*/
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content:url(../img/whatsapp-color.png) url(../img/x-color.png) url(../img/facebook-color.png) url(../img/instagram-color.png) url(../img/gmail-color.png) url(../img/chess.png) url(../img/me.png) url(../icons/menu-burger.png) url(../icons/cross.png);
+}
+
+/* burger-menu */
+.burger-menu, 
+.burger-menu-btn{
+    display: none;
+}
+
+.wrapper-main{
+    width: 110rem;
+    margin: 0 auto;
+}
+
+/* default styling */
+h1{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+}
+
+a{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+/* header */
+.main-header{
+    width: 100%;
+    height: 6rem;
+    padding: 0 6rem;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: var(--lightdarkgray);
+}
+.main-header nav{
+    display: flex;
+}
+.logo{
+    width: fit-content;
+    height: 4rem;
+    align-self: center;
+    cursor: pointer;
+}
+.logo img{
+    height: 100%;
+}
+.main-header ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-self: center;
+    padding-left: 4rem;
+}
+.main-header ul li{
+    position: relative;
+}
+.main-header ul li a{
+    height: 100%;
+    display: block;
+    padding: 0 1rem;
+    line-height: 60px;
+    font-size: 1.4rem;
+    font-family: RobotoSlabMedium;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+.main-header ul li a:hover{
+    border: 2px solid var(--purple);
+    color: var(--purple);
+}
+.main-header ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: -4rem;
+    transition: all ease-in-out 100ms;
+}
+.main-header ul li ul li a{
+    white-space: nowrap;
+}
+ul li:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+.sm-links{
+    width: fit-content;
+    height: 100%;
+    padding-right: 6rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.sm-whatsapp{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../img/whatsapp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sm-whatsapp:hover{
+    background-image: url(../img/whatsapp-color.png);
+}
+.sm-x{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../img/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sm-x:hover{
+    background-image: url(../img/x-color.png);
+}
+.sm-facebook{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sm-facebook:hover{
+    background-image: url(../img/facebook-color.png);
+}
+.sm-instagram{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sm-instagram:hover{
+    background-image: url(../img/instagram-color.png);
+}
+.sm-gmail{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../img/gmail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sm-gmail:hover{
+    background-image: url(../img/gmail-color.png);
+}
+
+/* footer */
+.footer-main{
+    width: 100%;
+    padding: 6rem 0 8rem;
+    background-color: var(--black);
+}
+.footer-main-flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footer-sitemap{
+    flex: 1 0 10rem;
+}
+.footer-sitemap a{
+    font-family: RobotoSlab;
+    line-height: 3rem;
+}
+.footer-sitemap a:hover{
+    opacity: 0.8;
+}
+.footer-sitemap ul{
+    border-left: 0.4rem solid var(--purple);
+    padding-left: 2rem;
+}
+
+.getintop{
+    font-family: RobotoSlab;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 7rem 10rem 0 10rem;
+    height: 4rem;
+    border: 0.1rem solid var(--purple);
+    border-radius: 0.8rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+.getintop:hover{
+    color: var(--purple);
+}
+
+.getintouch{
+    flex: 1 0 10rem;
+    text-align: right;
+}
+.getintouch p{
+    font-family: RobotoSlab;
+}
+
+
+/* Mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+
+@media only screen and (max-width: 600px){
+    /* change the wrapper-main for not scrolling left-right sides */
+    .wrapper-main{
+        width: calc(100% - 4rem);/* we set 80% not 100% because we want to have a little space to not touch the border of the phone */
+    }
+    .main-header{
+        padding: 0 2rem;
+    }
+    .main-header nav a{
+        display: visible;
+    }
+    .main-header nav ul{
+        display: none;
+    }
+    .sm-links{
+        display: flex;
+        background-color: var(--lightdarkgray);
+        padding-right: 0;
+    }
+  
+
+    .burger-menu-btn{
+        display: block;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0.6rem 0;
+        background-image: url(../icons/menu-burger.png), url(../icons/cross.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 5rem;
+    }
+
+    .burger-menu{
+        display: none;/* none/block */
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: var(--black);
+    }
+
+    .burger-menu ul{
+        width: 100%;
+        height: calc(100vh - 6rem);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .burger-menu ul li{
+        position: relative;
+        flex-basis: 100%;
+        height: calc(100% / var(--menu-count));
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease-in-out 200ms;
+        border-top: 0.2rem solid var(--lightdarkgray);
+    }
+    .burger-menu ul li:nth-last-child(1){
+        border-bottom: 0.2rem solid var(--lightdarkgray);
+    }
+
+    .burger-menu ul a{
+        display: block;
+        height: fit-content;
+        font-size: 3rem;
+        margin: 5rem 0;
+        flex-basis: 100%;
+        text-align: center;
+        font-family: RobotoSlabMedium;
+    }
+    .burger-menu ul a:hover{
+        background-color: transparent;
+        color: var(--purple);
+    }
+    .burger-menu nav{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .burger-menu ul li ul{
+        display: none;
+        height: fit-content;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+    }
+
+    .burger-menu ul li ul li{
+        height: calc(100% / var(--sub-menu-count));
+        display: block;
+        background-color: var(--darkgray);
+        border-top: 0.1rem solid var(--purple);
+    }
+    .burger-menu ul li ul li:nth-last-child(1){
+        border-bottom: 0.1rem solid var(--purple);
+    }
+
+    .burger-menu ul li ul li a{
+        background-color: var(--darkgray);
+        color: var(--white);
+    }
+
+    .burger-menu ul li ul li a:hover{
+        background-color: var(--darkgray);
+        color: var(--purple);
+    }
+
+    .burger-menu ul li:focus>ul,
+    .burger-menu ul li:hover>ul{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* footer */
+    .footer-main-flex{
+        flex-wrap: wrap;
+    }
+    .footer-sitemap{
+        flex-basis: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .footer-sitemap ul{
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .getintop{
+    flex-basis: 100%;    
+    padding: 0 2rem;
+    margin: 0 6.5rem 2rem;
+    }
+
+    .getintouch{
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    
+    /* header */
+    .main-header{
+        padding: 0 1rem;
+    }
+
+    .main-header ul{
+        padding-left: 1.5rem;
+    }
+
+    .main-header ul li ul{
+        left: -2rem;
+    }
+
+    .sm-links{
+        padding-right: 1rem;
+    }
+
+    /* footer */
+
+    .footer-main-flex{
+        flex-wrap: wrap;
+    }
+    .footer-sitemap{
+        flex-basis: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .footer-sitemap ul{
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .getintop{
+        flex-basis: 100%;    
+        padding: 0 2rem;
+        margin: 0 6.5rem 2rem;
+    }
+    
+    .getintouch{
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    /* header */
+    .main-header{
+        padding: 0 3rem;
+    }
+
+    .main-header ul{
+        padding-left: 6rem;
+    }
+
+    .main-header ul li ul{
+        left: -6rem;
+    }
+
+    .sm-links{
+        padding-right: 4rem;
+    }
+
+
+    /* footer */
+
+    .footer-main-flex{
+        flex-wrap: wrap;
+    }
+    .footer-sitemap{
+        flex-basis: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .footer-sitemap ul{
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .getintop{
+        flex-basis: 100%;    
+        padding: 0 2rem;
+        margin: 0 6.5rem 2rem;
+    }
+
+    .getintouch{
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+    /* header */
+    .main-header ul li ul{
+        left: -6rem;
+    }
+
+    /* footer */
+
+    .footer-main-flex{
+        flex-wrap: nowrap;
+    }
+    .footer-sitemap{
+        flex: 1 0 20rem;
+    }
+
+    .footer-sitemap ul{
+        border-left: 0.4rem solid var(--purple);
+        padding-left: 0;
+        padding-right: 6rem;
+        margin-left: 2rem;
+    }
+
+    .getintop{
+        margin: 7rem 6rem 0 10rem;
+    }
+
+    .getintouch{
+        flex: 1 0 30rem;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+    .wrapper-main{
+        width: calc(100% - 4rem);
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+/* user profile main */
+main{
+    width: 100%;
+    padding-top: 4rem;
+    --bg-img: url(../../img/shop_img/Joy_Boy_transparent.png);
+    --bg-img-opacity: 0.2;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+}
+main::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: var(--bg-img-opacity);
+
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover 100vh;
+}
+main h1{
+    color: var(--lightgray);
+    text-align: center;
+    font-size: 4rem;
+    font-family: RobotoSlabMedium;
+}
+.empty{
+    font-size: 1.4rem;
+    font-family: RobotoSlabMedium;
+    text-align: center;
+}
+.message{
+    background-color: var(--lightyellow);
+    width: 14rem;
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    z-index: 1000;
+}
+.message p{
+    font-size: 1.25rem;
+    font-family: RobotoSlabMedium;
+    color: var(--gray3);
+}
+.profile_main{
+    display: grid;
+    max-width: 105rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    align-items: flex-start;
+}
+.products_box{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    width: 25rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 0.2rem solid var(--gray3);
+    border-radius: 0.5rem;
+}
+.products_box img{
+    align-self: center;
+    width: 15rem;
+    height: 23rem;
+    padding-top: 1rem;
+}
+.products_name,
+.products_price{
+    align-self: center;
+    padding: 0.3rem 2rem;
+    font-size: 1.5rem;
+    font-family: RobotoSlabMedium;
+    color: var(--lightgray);
+    border-bottom: 0.2rem solid var(--gray3);
+}
+.products_action{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.products_quantity{
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-family: RobotoSlabMedium;
+    color: var(--lightgray);
+    padding: 1rem 0.5rem;
+    border: 0.2rem solid var(--gray3);
+    border-radius: 0.5rem;
+}
+.add_to_card_btn{
+    background-color: var(--gray);
+    color: var(--darkgray);
+    width: 6rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-family: RobotoSlab;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.add_to_card_btn:hover{
+    font-weight: bolder;
+    text-decoration: underline 0.1rem solid var(--darkgray);
+    font-size: 0.9rem;
+}
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    main{
+        --bg-img: none;
+    }
+    main h1{
+        font-size: 2rem;
+    }
+    .message{
+        display: none;
+    }
+    .profile_main{
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .products_box{
+        width: 100%;
+    }
+    .products_box img{
+        width: 50%;
+        height: 16rem;
+    }
+    .products_name,
+    .products_price{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    main{
+        --bg-img: none;
+    }
+    main h1{
+        font-size: 3rem;
+    }
+    .message{
+        display: none;
+    }
+    .profile_main{
+        max-width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .products_box{
+        width: 100%;
+    }
+    .products_box img{
+        width: 50%;
+        height: 16rem;
+    }
+    .products_name,
+    .products_price{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    main h1{
+        font-size: 3rem;
+    }
+    .profile_main{
+        max-width: 75%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    .products_box{
+        width: 100%;
+    }
+    .products_box img{
+        width: 50%;
+        height: 16rem;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .profile_main{
+        max-width: 75%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    main{
+        --bg-img: url(../../img/shop_img/Joy_Boy_transparent.png);
+    }
+    main h1{
+        font-size: 4rem;
+    }
+    .message{
+        display: flex;
+    }
+    .profile_main{
+        max-width: 105rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1rem;
+    }
+    .products_box{
+        width: 25rem;
+    }
+    .products_box img{
+        width: 15rem;
+        height: 23rem;
+    }
+    .products_name,
+    .products_price{
+        font-size: 1.5rem;
+    }
+}

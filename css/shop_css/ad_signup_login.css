@@ -1,0 +1,458 @@
+/* fonts */
+@font-face {
+    font-family: Roboto;
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Light.ttf);
+}
+@font-face {
+    font-family: RobotoSlabMedium;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoSlabBold;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Bold.ttf);
+}
+
+/* html/root */
+:root{
+    --white: #fff;
+    --lightgray: #ddd;
+    --darkgray: #1e1e1e;
+    --lightdarkgray: #3b3b3b;
+    --lightgray: #636363;
+    --black: #000;
+    --red: red;
+    --yellow: yellow;
+    --green: green;
+    --purple: purple;
+    --orange: orange;
+    --blue: blue;
+    --lightyellow: #fad985;
+    --skyblue: #4e84c4;
+    --box-shadow:0 .5rem 1rem rgb(0, 0, 0);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--darkgray);
+}
+
+/*reload the content before to remove the flicker of the image*/
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../../img/shop_img/secret_stuff.png);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/shop_img/secret_stuff.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* login/signup container */
+.container-login,
+.container-signup{
+    width: 70%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-login form{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    border-radius: 1rem;
+}
+
+/* login */
+.login h2{
+    margin: 0.7rem 0 -0.7rem;
+    font-family: RobotoSlabMedium;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline 0.2rem solid var(--black);
+    color: var(--black);
+}
+.login input{
+    width: 50%;
+    height: 3rem;
+    margin: 2rem 0 0;
+    padding-left: 1rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    border: 0.1rem solid var(--darkgray);
+    box-shadow: var(--box-shadow);
+    font-family: RobotoSlabMedium;
+    color: var(--darkgray);
+}
+.login input:focus{
+    border: 0.2rem solid var(--black);
+}
+/* login/signup btn */
+.submit-btn{
+    width: 20%;
+    height: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    align-self: center;
+    background-color: var(--black);
+    border: 0.1rem solid var(--red);
+    border-radius: 0.5rem;
+    font-family: RobotoSlab;
+    color: var(--red);
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    box-shadow: var(--box-shadow);
+}
+.submit-btn:hover{
+    transform: scale(1.05);
+}
+/* --- */
+.login p{
+    font-family: RobotoSlabBold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--white);
+    display: block;
+    width: 53%;
+    align-self: center;
+    border-radius: 0.5rem;
+} 
+.login a{
+    text-transform: uppercase;
+    text-decoration: underline solid var(--black);
+    cursor: pointer;
+}
+
+/* signup */
+.container-signup form{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    border-radius: 1rem;
+}
+.signup h2{
+    margin: 0.7rem 0 -0.7rem;
+    font-family: RobotoSlabMedium;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline 0.2rem solid var(--black);
+    color: var(--black);
+}
+.email,
+.pwd{
+    width: 54.1%;
+    height: 3rem;
+    margin: 2rem 0 0;
+    padding-left: 1rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    border: 0.1rem solid var(--darkgray);
+    box-shadow: var(--box-shadow);
+    font-family: RobotoSlabMedium;
+    color: var(--darkgray);
+}
+.email:focus,
+.pwd:focus{
+    border: 0.2rem solid var(--black);
+}
+.name_last{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.name,
+.lastname{
+    width: 25%;
+    height: 3rem;
+    margin: 2rem 1rem 0;
+    padding-left: 1rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    border: 0.1rem solid var(--darkgray);
+    box-shadow: var(--box-shadow);
+    font-family: RobotoSlabMedium;
+    color: var(--darkgray);
+    display: flex;
+    flex-direction: row;
+}
+.name:focus,
+.lastname:focus{
+    border: 0.2rem solid var(--black);
+}
+.signup p{
+    margin: 2rem 0 2rem;
+    font-family: RobotoSlab;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: underline 0.1rem solid var(--black);
+    max-width: 80%;
+    align-self: center;
+    background-color: var(--white);
+    color: var(--darkgray);
+    border-radius: 1rem;
+}
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    .container-login form{
+        width: 100%;
+        height: 43%;
+    }
+    /* login */
+    .login h2{
+        font-size: 2.3rem;
+    }
+    .login input{
+        width: 19rem;
+        margin: 2rem 0 -1rem;
+    }
+
+    /* login/signup btn */
+    .submit-btn{
+        width: 8.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 1rem;
+        font-size: 1.2rem;
+    }
+    /* --- */
+    .login p{
+        font-size: 1rem;
+    } 
+      /* signup */
+    .container-signup form{
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+        align-self: center;
+    }
+    
+    .signup h2{
+        font-size: 2.3rem;
+    }
+    .email,
+    .pwd{
+        width: 19.1rem;
+        margin: 2rem 0 -1rem;
+    }
+    .name,
+    .lastname{
+        width: 8.51rem;
+        margin: 2rem 1rem -1rem;
+    }
+    .signup p{
+        margin: 2rem 0 -1rem;
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    .container-login form{
+        width: 100%;
+        height: 43%;
+    }
+    /* login */
+    .login h2{
+        font-size: 2.3rem;
+    }
+    .login input{
+        width: 27rem;
+        margin: 2rem 0 -1rem;
+    }
+
+    /* login/signup btn */
+    .submit-btn{
+        width: 8.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 1rem;
+        font-size: 1.2rem;
+    }
+    /* --- */
+    .login p{
+        font-size: 1rem;
+        width: 21.5rem;
+    } 
+    /* signup */
+    .container-signup form{
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+        align-self: center;
+    }
+    .signup h2{
+        font-size: 2.3rem;
+    }
+
+    .email,
+    .pwd{
+        width: 19.1rem;
+        margin: 2rem 0 -1rem;
+    }
+    .name,
+    .lastname{
+        width: 8.65rem;
+        margin: 2rem 1rem -1rem;
+    }
+    .signup p{
+    margin: 2rem 0 0;
+}
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .container-login form{
+        width: 50%;
+        height: 43%;
+    }
+    /* login */
+    .login h2{
+        font-size: 2.3rem;
+    }
+    .login input{
+        width: 19rem;
+        margin: 2rem 0 -1rem;
+    }
+
+    /* login/signup btn */
+    .submit-btn{
+        width: 8.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 1rem;
+        font-size: 1.2rem;
+    }
+    /* --- */
+    .login p{
+        font-size: 1rem;
+        width: 21.5rem;
+    } 
+    /* signup */
+    .container-signup form{
+        width: 65%;
+        height: 70%;
+        justify-content: center;
+        align-self: center;
+    }
+    .signup h2{
+        font-size: 2.3rem;
+    }
+    .email,
+    .pwd{
+        width: 19.1rem;
+        margin: 2rem 0 -1rem;
+    }
+    .name,
+    .lastname{
+        width: 8.65rem;
+        margin: 2rem 1rem -1rem;
+    }
+    .signup p{
+        margin: 2rem 0 0;
+        font-size: 0.8rem;
+        max-width: 30rem;
+    }  
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .container-login form{
+        width: 50%;
+        height: 43%;
+    }
+    /* login */
+    .login h2{
+        font-size: 2.3rem;
+    }
+    .login input{
+        width: 21rem;
+        margin: 2rem 0 -1rem;
+    }
+
+    /* login/signup btn */
+    .submit-btn{
+        width: 8.5rem;
+        height: 2.8rem;
+        margin: 2rem 0 1rem;
+        font-size: 1.2rem;
+    }
+    /* --- */
+    .login p{
+        font-size: 1rem;
+        width: 21.5rem;
+    } 
+    /* signup */
+    .container-signup form{
+        width: 50%;
+        height: 70%;
+        justify-content: center;
+        align-self: center;
+    }
+    .signup h2{
+        font-size: 2.3rem;
+    }
+    .email,
+    .pwd{
+        width: 19.1rem;
+        margin: 2rem 0 -1rem;
+    }
+    .name,
+    .lastname{
+        width: 8.65rem;
+        margin: 2rem 1rem -1rem;
+    }
+    .signup p{
+        margin: 2rem 0 0;
+        font-size: 0.8rem;
+        max-width: 30rem;
+    }  
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    .login p{
+        font-size: 1rem;
+        width: 50%;
+    }
+    .container-signup form{
+        justify-content: center;
+        align-self: center;
+    }
+    
+}

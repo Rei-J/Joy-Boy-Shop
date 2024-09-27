@@ -1,0 +1,357 @@
+main{
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    padding-top: 8rem;
+}
+main h1{
+    font-size: 2.5rem;
+    font-family: RobotoSlabMedium;
+    text-align: center;
+    text-transform: uppercase;
+}
+.empty{
+    font-size: 1.4rem;
+    font-family: RobotoSlabMedium;
+    text-align: center;
+}
+.placed-orders{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 1rem 0 1rem 7rem;
+}
+.prod_box{
+    background-color: var(--gray3);
+    display: flex;
+    width: 25rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.prod_box p{
+    font-size: 1.2rem;
+    font-family: RobotoSlabMedium;
+    text-transform: capitalize;
+    color: var(--lightgray);
+}
+.prod_box p:nth-child(1){
+    text-align: center;
+    font-size: 1.25rem;
+    border-left: 0.2rem solid var(--lightgray);
+    border-right: 0.2rem solid var(--lightgray);
+    border-radius: 0.3rem;
+}
+.update_payment{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: RobotoSlabMedium;
+    background-color: var(--gray3);
+    color: var(--lightgray);
+    border: 0.1rem solid var(--lightgray);
+}
+.update_payment option{
+    font-size: 1.7rem;
+}
+.admin_option{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+.upd_option,
+.admin_option a{
+    background-color: var(--gray3);
+    color: var(--lightgray);
+    width: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: RobotoSlab;
+    border: 0.1rem solid var(--lightgray);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.admin_option a:nth-last-child(1){
+    background-color: var(--red);
+    color: var(--white);
+}
+.upd_option:hover{
+    background-color: var(--lightdarkgray);
+    transition: all 300ms ease-in-out;
+}
+.admin_option a:nth-last-child(1):hover{
+    background-color: var(--darkred);
+    transition: all 300ms ease-in-out;
+}
+
+.placed_accounts,
+.placed_messages{
+    background-color: var(--gray);
+    margin: 1rem 0;
+    padding: 1rem 1rem 1rem 6rem;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.placed_messages{
+    margin: 0;
+}
+.account_box,
+.messages_box{
+    background-color: var(--gray3);
+    display: flex;
+    width: 25rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.account_box p,
+.messages_box p{
+    font-size: 1.2rem;
+    font-family: RobotoSlabMedium;
+    text-transform: capitalize;
+    color: var(--lightgray);
+}
+.messages_box p:nth-last-child(2) span{
+    word-break: break-all;
+}
+.account_box p:nth-child(1),
+.messages_box p:nth-child(1){
+    text-align: center;
+    font-size: 1.25rem;
+    border-left: 0.2rem solid var(--lightgray);
+    border-right: 0.2rem solid var(--lightgray);
+    border-radius: 0.3rem;
+}
+.account_box a,
+.messages_box a{
+    background-color: var(--red);
+    color: var(--lightgray);
+    width: 7rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    font-family: RobotoSlabMedium;
+    margin: 0.5rem 0;
+    align-self: center;
+    text-align: center;
+    border: 0.1rem solid var(--lightgray);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.messages_box a{
+    width: 10rem;
+}
+.account_box a:hover,
+.messages_box a:hover{
+    background-color: var(--darkred);
+    transition: all 300ms ease-in-out;
+}
+
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    main h1{
+        font-size: 2rem;
+    }
+    .placed-orders{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .prod_box{
+        width: 100%;
+    }
+    .prod_box p{
+        font-size: 1rem;
+    }
+    .update_payment{
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .update_payment option{
+        font-size: 1.3rem;
+    }
+    .upd_option,
+    .admin_option a{
+        font-size: 1rem;
+    }
+
+    .placed_accounts,
+    .placed_messages{
+        padding: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .account_box,
+    .messages_box{
+        width: 100%;
+    }
+    .account_box p,
+    .messages_box p{
+        font-size: 1.1rem;
+    }
+    .account_box a,
+    .messages_box a{
+        height: 2rem;
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    main h1{
+        font-size: 2.1rem;
+    }
+    .placed-orders{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .prod_box{
+        width: 100%;
+    }
+    .prod_box p{
+        font-size: 1.1rem;
+    }
+    .update_payment{
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .update_payment option{
+        font-size: 1.3rem;
+    }
+    .upd_option,
+    .admin_option a{
+        font-size: 1rem;
+    }
+
+    .placed_accounts,
+    .placed_messages{
+        padding: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    .account_box,
+    .messages_box{
+        width: 100%;
+    }
+    .account_box p,
+    .messages_box p{
+        font-size: 1.2rem;
+    }
+    .account_box a,
+    .messages_box a{
+        height: 2rem;
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    main h1{
+        font-size: 2.2rem;
+    }
+    .placed-orders{
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .prod_box{
+        width: 100%;
+    }
+
+    .update_payment{
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+    .update_payment option{
+        font-size: 1.5rem;
+    }
+    .upd_option,
+    .admin_option a{
+        font-size: 1.2rem;
+    }
+
+    .placed_accounts,
+    .placed_messages{
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    .account_box,
+    .messages_box{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .placed-orders{
+        padding: 1rem;
+    }
+    .prod_box{
+        width: 100%;
+    }
+
+
+    .placed_accounts,
+    .placed_messages{
+        padding: 1rem;
+    }
+    .account_box,
+    .messages_box{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    main h1{
+        font-size: 2.5rem;
+    }
+    .placed-orders{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1rem 0 1rem 7rem;
+    }
+    .prod_box{
+        width: 25rem;
+    }
+    .prod_box p{
+        font-size: 1.2rem;
+    }
+    .update_payment{
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+    .update_payment option{
+        font-size: 1.7rem;
+    }
+    .upd_option,
+    .admin_option a{
+        font-size: 1.4rem;
+    }
+
+    .placed_accounts,
+    .placed_messages{
+        padding: 1rem 1rem 1rem 6rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    .account_box,
+    .messages_box{
+        width: 25rem;
+    }
+    .account_box p,
+    .messages_box p{
+        font-size: 1.2rem;
+    }
+    .account_box a,
+    .messages_box a{
+        height: 2.4rem;
+        font-size: 1.2rem;
+    }
+}

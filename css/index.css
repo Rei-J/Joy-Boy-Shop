@@ -1,0 +1,324 @@
+/* main */
+main{
+    width: 100%;
+    height: calc(100vh - 6rem);
+    margin-top: 6rem;
+    background-color: var(--black);
+    background-image: url(../img/chess.png);
+    background-size: 65vh, cover;
+    background-repeat: no-repeat;
+    background-position: bottom left 50%, center;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30rem;
+}
+
+.main-intro{
+    padding-bottom: 8vh;
+}
+.main-quotes{
+    padding-bottom: 8vh;
+}
+
+.main-intro h1{
+    font-family: RobotoSlabMedium;
+    font-size: 5.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+main p{
+    font-family: RobotoSlab;
+    font-size: 1.8rem;
+    line-height: 1.75;
+    max-width: 50rem;/* instead of using <br> */
+}
+.main-quotes p{
+    border-left: 4px solid var(--purple);
+    padding-left: 2rem;
+    margin: 4rem 0;
+}
+.main-quotes p:nth-child(1){
+    margin-left: 3rem;
+}
+.main-quotes p:nth-child(2){
+    margin-top: -1.4rem;
+    margin-left: 10rem;
+}
+.main-quotes p:nth-child(3){
+    margin-top: -1.4rem;
+    margin-left: 1.3rem;
+}
+/* About me */
+.index-about{
+    width: 100%;
+    padding: 6rem 0;
+}
+.index-about-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6rem;
+}
+.index-about-img img{
+    width: 30rem;
+    border-radius: 30rem;
+}
+.index-about-text{
+    flex-basis: 45.5rem;
+}
+.index-about-text h2{
+    font-family: RobotoSlabMedium;
+}
+.index-about-text p{
+    padding: 2rem 0;
+    font-family: RobotoSlab;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+.index-about-skill{
+    flex-basis: 35rem;
+}
+.index-about-skill-bar{
+    width: calc(100% - 0.8rem);
+    height: 2rem;
+    border: 0.3rem solid var(--black);
+}
+.index-about-skill-bar-fill{
+    height: 100%;
+    background-color: var(--purple);
+}
+.htmlcss{
+    width: 70%;
+}
+.js{
+    width: 50%;
+}
+.php{
+    width: 50%;
+}
+.ms{
+    width: 70%;
+}
+
+/* Mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+
+@media only screen and (max-width: 600px){
+    /* main */
+    main{
+        align-items: flex-end;
+    }
+
+    .main-quotes{
+        display: none;
+    }
+
+    .main-intro h1{
+        text-align: center;
+        font-size: 4.3rem;
+        line-height: 1.25;
+    }
+
+    /* About me */
+    .index-about-flex{
+        flex-wrap: wrap;/* we need to set flex-wrap because if not, he will stay in default state, which it's nowrap */
+        row-gap: 2rem;
+    }
+    .index-about-img{
+        width: 60%;/* because different devide have different resolution, and we are setting in % for the imge to be scaling correctly */
+    }
+    .index-about-img img{
+        width: 100%;
+    }
+    .index-about-text{
+        flex-basis: 100%;
+    }
+    .index-about-text h2{
+        text-align: center;
+    }
+    .index-about-text p{
+        text-align: center;
+        max-width: 94%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    /* main */
+    main{
+        align-items: flex-end;
+    }
+
+    .main-quotes{
+        display: none;
+    }
+
+    .main-intro h1{
+        font-size: 4.8rem;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+
+    /* About me */
+
+    .index-about-flex{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .index-about-img{
+        width: 60%;
+    }
+    .index-about-img img{
+        width: 100%;
+    }
+    .index-about-text{
+        flex-basis: 100%;
+    }
+
+    .index-about-text h2{
+        text-align: center;
+    }
+
+    .index-about-text p{
+        text-align: center;
+        max-width: 94%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* main */
+    main{
+        align-items: center;
+    }
+    
+    .main-quotes{
+        display: block;
+    }
+
+    .main-intro h1{
+        font-size: 3.5rem;
+        line-height: 1.1;
+        text-align: left;
+        margin-left: 3rem;
+    }
+
+    main p{
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    .main-quotes p{
+        margin: 4rem 2rem;
+    }
+    .main-quotes p:nth-child(1){
+        margin-left: 1rem;
+    }
+    .main-quotes p:nth-child(2){
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+    .main-quotes p:nth-child(3){
+        margin-top: 0;
+        margin-left: -2rem;
+        line-height: 1.6;
+    }
+
+
+    /* About me */
+    .index-about{
+        width: 100%;
+        padding: 6rem 0;
+    }
+    .index-about-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 6rem;
+    }
+    .index-about-img{
+        width: 30%;
+    }
+
+    .index-about-img img{
+        width: 100%;
+    }
+    .index-about-text{
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    /* main */
+    .main-intro h1{
+        font-size: 4rem;
+        margin-left: 2rem;
+    }
+
+    main p{
+        font-size: 1.1rem;
+        line-height: 1.25;
+    }
+    .main-quotes p{
+        padding-right: 2rem;
+    }
+
+    .main-quotes p:nth-child(2){
+        margin-top: -1rem;
+        margin-left: 6rem;
+    }
+    .main-quotes p:nth-child(3){
+        margin-top: -1rem;
+    }
+
+    /* About me */
+    .index-about-img{
+        width: 25%;
+    }
+
+    .index-about-img img{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+    /* main */
+    .main-intro h1{
+        font-family: RobotoSlabMedium;
+        font-size: 5rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+    }
+    main p{
+        font-family: RobotoSlab;
+        font-size: 1.4rem;
+        line-height: 1.75;
+        max-width: 50rem;/* instead of using <br> */
+    }
+
+    /* About me */
+
+    .index-about-flex{
+        flex-wrap: nowrap;
+    }
+    .index-about-img{
+        width: 25%;
+    }
+    .index-about-img img{
+        width: 100%;
+    }
+    .index-about-text{
+        flex-basis: 45.5rem;
+    }
+    .index-about-text h2{
+        font-family: RobotoSlabMedium;
+    }
+    .index-about-text p{
+        padding: 2rem 0;
+        font-family: RobotoSlab;
+        font-size: 1.1rem;
+        line-height: 1.75;
+    }
+}

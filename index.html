@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+
+    <!-- linkt to favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- burger-menu -->
+    <div  class="burger-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#">Projects</a>
+                    <ul>
+                        <li><a href="shop_index.php">Shop Project</a></li>
+                        <li><a href="#">empty</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- header -->
+    <header class="main-header">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="website logo">
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#">Projects</a>
+                    <ul>
+                        <li><a href="shop_index.php" target="_blank">Shop Project</a></li>
+                        <li><a href="#" target="_blank">empty</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="sm-links">
+            <a href="https://web.whatsapp.com/" target="_blank"><div class="sm-whatsapp"></div></a>
+            <a href="https://twitter.com/" target="_blank"><div class="sm-x"></div></a>
+            <a href="https://www.facebook.com/" target="_blank"><div class="sm-facebook"></div></a>
+            <a href="https://www.instagram.com/" target="_blank"><div class="sm-instagram"></div></a>
+            <a href="https://mail.google.com/" target="_blank"><div class="sm-gmail"></div></a>
+        </div>
+        
+        <div class="burger-menu-btn"></div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="main-intro">
+            <h1><br>Hi,<br>I'm Rei Jazo<br><br>Web Development</h1>
+        </div>
+        <div class="main-quotes">
+            <p>"The more that you read, the more<br>things you will know. The more that<br>
+                you learn, the more places you'll go."<br><br>- Dr. Seuss</p>
+            <p>"For the best return on your<br>money, pour your purse<br>
+                into your head."<br><br>- Benjamin Franklin</p>
+            <p>- My motto : <br>
+                "Nothing is impossible."</p>
+        </div>
+    </main>
+    
+    <!-- About Me -->
+    <section class="index-about" id="about-me">
+        <div class="wrapper-main index-about-flex">
+            <div class="index-about-img">
+                <img src="img/me.png" alt="my initials">
+            </div>
+            <div class="index-about-text">
+                <h2>About me</h2>
+                <p>My name is Rei Jazo. I have a Bachelor degree in Information Technology from the University Ismail Qemali Vlore. 
+                    I learned and practice independently HTML, CSS, PHP, JAVASCRIPT, WordPress because my goal is to become web development, 
+                    I like very much to design the website, but to achieve my goal I've a lot to learn from people with experience, 
+                    from different situation I might face on work. My wish is to start working in a way to complete the part of the puzzle that I am missing, 
+                    which is work experience, and to learn new things every day in order to grow professionally. I think this is the next step I need to take on my professional career. 
+                    Thank you.</p>
+            </div>
+            <div class="index-about-skill">
+                <p>HTML & CSS</p>
+                <div class="index-about-skill-bar">
+                    <div class="index-about-skill-bar-fill htmlcss"></div>
+                </div>
+                <p>Javascript</p>
+                <div class="index-about-skill-bar">
+                <div class="index-about-skill-bar-fill js"></div>
+                </div>
+                <p>PHP</p>
+                <div class="index-about-skill-bar">
+                <div class="index-about-skill-bar-fill php"></div>
+                </div>
+                <p>MySql</p>
+                <div class="index-about-skill-bar">
+                <div class="index-about-skill-bar-fill ms"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer-main">
+        <div class="wrapper-main footer-main-flex">
+            <div class="footer-sitemap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </div>
+                <button class="getintop" onclick="scrollToTop()">Get in top of the page</button>
+            <div class="getintouch" id="contact-me">
+                <ul>
+                    <li><p>Get in touch</p></li>
+                    <li><p>Phone number: 0692917931</p></li>
+                    <li><p>Email address: reijazo77@gmail.com</p></li>
+                    <li><p>Address: Vlore 9402, Albania</p></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

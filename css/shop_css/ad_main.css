@@ -1,0 +1,534 @@
+/* fonts */
+@font-face {
+    font-family: Roboto;
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Light.ttf);
+}
+@font-face {
+    font-family: RobotoSlabMedium;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Medium.ttf);
+}
+@font-face {
+    font-family: RobotoSlabBold;
+    src: url(../../fonts/Roboto\ Slab/RobotoSlab-Bold.ttf);
+}
+
+/* html/root */
+:root{
+    --white: #fff;
+    --yellowgray: #7c6b41;
+    --lightgray: #ddd;
+    --darkgray: #1e1e1e;
+    --lightdarkgray: #3b3b3b;
+    --gray: gray;
+    --gray2: #323131;
+    --gray3: #4a4949;
+    --black: #000;
+    --red: red;
+    --darkred: #790202;
+    --redversion: #d82d2d;
+    --yellow: yellow;
+    --green: green;
+    --purple: purple;
+    --orange: orange;
+    --blue: blue;
+    --lightyellow: #fad985;
+    --skyblue: #4e84c4;
+    --box-shadow:0 .5rem 1rem rgb(0, 0, 0);
+    --box-shadow-gray: 0 .2rem .2rem .2rem #323131;
+    --menu-count: 3; /* list items */
+    /* --sub-menu-count: 2; */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--darkgray);
+}
+
+/*reload the content before to remove the flicker of the image*/
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url();
+}
+
+/* wrapper-main */
+
+
+
+/* default styling */
+h1{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+}
+
+a{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: var(--white);
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+/* header */
+.header{
+    background-color: var(--gray3);
+    width: 100%;
+    height: 7rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed;
+    z-index: 1000;
+}
+.logo{
+    flex: 1 0 10%;
+    align-self: center;
+    font-family: RobotoSlabMedium;
+    font-size: 2.5rem;
+}
+.logo span{
+    color: var(--darkgray);
+}
+.navbar{
+    flex: 1 0 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a{
+    font-family: RobotoSlabMedium;
+    font-size: 1.7rem;
+    text-transform: lowercase;
+
+}
+.navbar a:hover{
+    color: var(--darkgray);
+    transition: all 0.1s ease-in-out;
+}
+.user_settings{
+    flex: 1 0 5%;
+    background-image: url(../../icons/account.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    cursor: pointer;
+}
+/* user info/drop menu */
+.user_menu{
+    display: none;
+    flex-direction: column;
+    width: 20rem;
+    height: 20.5rem;
+    margin-right: 1.5rem;
+    background-color: var(--gray3);
+    position: fixed;
+    top: 10.9%;
+    right: 0;
+    align-self: center;
+    border: 0.15rem solid var(--gray2);
+    border-radius: 1rem;
+    z-index: 1000;
+}
+.user_menu ul{
+    width: 100%;
+}
+.user_menu li{
+    border-bottom: 0.1rem solid var(--gray);
+}
+.user_menu li:nth-child(1){
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+.user_menu li:hover{
+    background-color: var(--gray2);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+.user_menu li a{
+    display: block;
+    height: 4rem;
+    margin: 0 0.5rem;
+    padding: 1rem 0;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+    color: var(--lightgray);
+}
+.first,
+.second{
+    background-image: url(../../icons/profile.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 10%;
+    text-align: center;
+    text-transform: lowercase;
+}
+.second{
+    background-image: url(../../icons/user.png);
+}
+.third,
+.forth{
+    background-image: url(../../icons/setting.png), url(../../icons/right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: left, right;
+    background-size: 10%;
+    text-align: center;
+}
+.forth{
+    background-image: url(../../icons/remove-user.png), url(../../icons/right-arrow.png);
+}
+.user_menu form{
+    width: 100%;
+    height: 4.1rem;
+    background-image: url(../../icons/logout.png);
+    background-position: calc(20rem - 19.5rem);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.logout-btn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-family: RobotoSlabMedium;
+    font-size: 1.2rem;
+    color: var(--lightgray);
+}
+.user_menu form:hover{
+    background-color: var(--gray2);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+/* change the username popup */
+.change_username,
+.delete_user{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;/**/
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+.close_change_username,
+.close_delete_user{
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--lightgray);
+    background-image: url(../../icons/circle-xmark-bold.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 27.9%;
+    right: 36.5%;
+    border: 0.1rem solid var(--gray3);
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+.change_username form,
+.delete_user form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--gray2);
+    color: var(--lightyellow);
+    line-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-gray);
+}
+.change_username form h2,
+.delete_user form h2{
+    font-family: RobotoSlab;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--lightgray);
+}
+.change_username form input,
+.delete_user form input{
+    display: flex;
+    width: 24rem;
+    height: 3rem;
+    background-color: var(--lightgray);
+    color: var(--darkgray);
+    padding-left: 1rem;
+    font-family: RobotoSlabMedium;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+.change_username form input:focus,
+.delete_user form input:focus{
+    border: 0.2rem solid var(--darkgray);
+}
+.save-btn{
+    width: 7rem;
+    height: 3rem;
+    background-color: transparent;
+    color: var(--lightgray);
+    border: 0.1rem solid var(--lightgray);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: RobotoSlabMedium;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.save-btn:hover{
+    transform: scale(1.05);
+    transition: all 200ms ease-in-out;
+}
+
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    /* header */
+    .header{
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+    .logo{
+        flex: 1 0 25%;
+        font-size: 1.4rem;
+    }
+    .navbar{
+        flex: 1 0 55%;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar a{
+        font-size: 1.2rem;
+    }
+    .user_settings{
+        flex: 1 0 20%;
+        background-size: 25%;
+    }
+    /* change the username popup */
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 10%;
+    }
+    .change_username form,
+    .delete_user form{
+        width: 27rem;
+    }
+    .change_username form h2,
+    .delete_user form h2{
+        font-size: 1rem;
+    }
+    .change_username form input,
+    .delete_user form input{
+        width: 75%;
+        height: 2.7rem;
+        margin: 1rem 0;
+    }
+    .change_username form input:focus,
+    .delete_user form input:focus{
+        border: 0.1rem solid var(--darkgray);
+    }
+    .save-btn{
+        width: 25%;
+        height: 2.5rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    /* header */
+    .header{
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+    .logo{
+        flex: 1 0 25%;
+        font-size: 1.5rem;
+    }
+    .navbar{
+        flex: 1 0 55%;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar a{
+        font-size: 1.4rem;
+    }
+    .user_settings{
+        flex: 1 0 20%;
+        background-size: 23%;
+    }
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 20%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* header */
+    .header{
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+    .logo{
+        flex: 1 0 25%;
+        font-size: 1.7rem;
+    }
+    .navbar{
+        flex: 1 0 55%;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar a{
+        font-size: 1.5rem;
+    }
+    .user_settings{
+        flex: 1 0 20%;
+        background-size: 18%;
+    }
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 25%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    /* header */
+    .header{
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+    .logo{
+        flex: 1 0 25%;
+        font-size: 1.7rem;
+    }
+    .navbar{
+        flex: 1 0 55%;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar a{
+        font-size: 1.5rem;
+    }
+    .user_settings{
+        flex: 1 0 20%;
+        background-size: 13%;
+    }
+    .close_change_username,
+    .close_delete_user{
+        width: 2rem;
+        height: 2rem;
+        right: 32.5%;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    /* header */
+    .header{
+        padding: 0 2rem;
+    }
+    .logo{
+        flex: 1 0 10%;
+        font-size: 2.5rem;
+    }
+    .navbar{
+        flex: 1 0 85%;
+        gap: 3rem;
+    }
+    .navbar a{
+        font-size: 1.7rem;
+    }
+    .user_settings{
+        flex: 1 0 5%;
+        background-size: 50%;
+    }
+    /* change the username popup */
+    .close_change_username,
+    .close_delete_user{
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 36.5%;
+    }
+    .change_username form,
+    .delete_user form{
+        width: 30rem;
+    }
+    .change_username form h2,
+    .delete_user form h2{
+        font-size: 1.2rem;
+    }
+    .change_username form input,
+    .delete_user form input{
+        width: 24rem;
+        height: 3rem;
+        margin: 1.5rem 0;
+    }
+    .change_username form input:focus,
+    .delete_user form input:focus{
+        border: 0.2rem solid var(--darkgray);
+    }
+    .save-btn{
+        width: 7rem;
+        height: 3rem;
+    }
+}

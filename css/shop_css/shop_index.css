@@ -1,0 +1,885 @@
+main{
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+    background-image: url(../../img/shop_img/JoyBoy-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.loaded {
+    opacity: 1;
+}
+
+/* movies */
+#movie-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4 img5 img6"
+    "img7 img8 img9 img10 img11 img12";
+}
+#movie-gallery h2,
+#watch-anime h2,
+#tvseries h2{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+}
+#movie-gallery h2 a,
+#watch-anime h2 a,
+#tvseries h2 a{
+    font-family: Roboto;
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+    text-align: left;
+    align-self: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--darkgray);
+}
+#movie-gallery h2 img,
+#watch-anime h2 img,
+#tvseries h2 img{
+    width: 4.5rem;
+    height: 4.5rem;
+    align-self: center;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+#movie-gallery .movie-img,
+.anime-img,
+.series-img{
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+.anime-img,
+.series-img{
+    height: 20rem;
+}
+#movie-gallery .movie-img:nth-last-child(1),
+.anime-img:nth-last-child(1),
+.series-img:nth-last-child(1){
+    margin-bottom: 1rem;
+}
+#movie-gallery h2{
+    grid-area: gallery-h2;
+}
+#movie-gallery .img1{
+    grid-area: img1;
+    background-image: url(../../img/shop_img/thumb/avengers\ end\ game.jpg);
+}
+#movie-gallery .img2{
+    grid-area: img2;
+    background-image: url(../../img/shop_img/thumb/blue-beetle.jpg);
+}
+#movie-gallery .img3{
+    grid-area: img3;
+    background-image: url(../../img/shop_img/thumb/captain\ america.jpg);
+}
+#movie-gallery .img4{
+    grid-area: img4;
+    background-image: url(../../img/shop_img/thumb/gran\ turismo.jpg);
+}
+#movie-gallery .img5{
+    grid-area: img5;
+    background-image: url(../../img/shop_img/thumb/iron\ man\ 3.jpg);
+}
+#movie-gallery .img6{
+    grid-area: img6;
+    background-image: url(../../img/shop_img/thumb/oppenheimer.jpg);
+}
+#movie-gallery .img7{
+    grid-area: img7;
+    background-image: url(../../img/shop_img/thumb/spider-man\ no\ way\ home.jpg);
+}
+#movie-gallery .img8{
+    grid-area: img8;
+    background-image: url(../../img/shop_img/thumb/transformers\ rise\ of\ the\ beasts.jpg);
+}
+#movie-gallery .img9{
+    grid-area: img9;
+    background-image: url(../../img/shop_img/thumb/uncharted.jpg);
+}
+#movie-gallery .img10{
+    grid-area: img10;
+    background-image: url(../../img/shop_img/thumb/venom.jpg);
+}
+#movie-gallery .img11{
+    grid-area: img11;
+    background-image: url(../../img/shop_img/thumb/mission\ impossible\ dead\ reckoning.jpg);
+}
+#movie-gallery .img12{
+    grid-area: img12;
+    background-image: url(../../img/shop_img/thumb/the\ meg\ 2.jpg);
+}
+.movie-img div,
+.anime-img div,
+.series-img div{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+.movie-img div:hover,
+.anime-img div:hover,
+.series-img div:hover{
+    opacity: 0.7;
+    transition: all ease-in-out 200ms;
+}
+.movie-img a,
+.anime-img a,
+.series-img a{
+    font-family: RobotoSlabMedium;
+    font-size: 1.5rem;
+    color: var(--lightgray);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.anime-img a,
+.series-img a{
+    font-size: 1.2rem;
+}
+
+/* top moving gallery */
+#moving-gallery{
+    overflow: hidden;
+}
+.moving-gallery-lr{
+    display: flex;
+    gap: 1rem;
+    animation: moveImages 20s linear infinite;
+    margin: 1rem 0;
+}
+.moving-img{
+    width: 100%;
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: default;
+}
+#moving-gallery .img1{
+    background-image: url(../../img/shop_img/thumb/avengers\ end\ game.jpg);
+}
+#moving-gallery .img2{
+    background-image: url(../../img/shop_img/thumb/black\ clover.jpg);
+}
+#moving-gallery .img3{
+    background-image: url(../../img/shop_img/thumb/dragon\ ball\ super.jpg);
+}
+#moving-gallery .img4{
+    background-image: url(../../img/shop_img/thumb/game\ of\ thrones.jpg);
+}
+#moving-gallery .img5{
+    background-image: url(../../img/shop_img/thumb/naruto.jpg);
+}
+#moving-gallery .img6{
+    background-image: url(../../img/shop_img/thumb/one-piece.jpg);
+}
+#moving-gallery .img7{
+    background-image: url(../../img/shop_img/thumb/oppenheimer.jpg);
+}
+#moving-gallery .img8{
+    background-image: url(../../img/shop_img/thumb/peaky\ blinders.jpg);
+}
+#moving-gallery .img9{
+    background-image: url(../../img/shop_img/thumb/spider-man\ no\ way\ home.jpg);
+}
+#moving-gallery .img10{
+    background-image: url(../../img/shop_img/thumb/uncharted.jpg);
+}
+#moving-gallery .img11{
+    background-image: url(../../img/shop_img/thumb/vikings.jpg);
+}
+#moving-gallery .img12{
+    background-image: url(../../img/shop_img/thumb/wednesday.jpg);
+}
+
+/* anime */
+#anime{
+    margin-top: 2rem;
+    background-image: url(../../img/shop_img/anime-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#watch-anime{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: 
+    "anime-h2 anime-h2 anime-h2 anime-h2 anime-h2 anime-h2"
+    "anime1 anime2 anime3 anime4 anime5 anime6"
+    "anime7 anime8 anime9 anime10 anime11 anime12";
+}
+
+#watch-anime h2{
+    grid-area: anime-h2;
+}
+#watch-anime .anime1{
+    grid-area: anime1;
+    background-image: url(../../img/shop_img/thumb/attack\ on\ titan.jpg);
+}
+#watch-anime .anime2{
+    grid-area: anime2;
+    background-image: url(../../img/shop_img/thumb/black\ clover.jpg);
+}
+#watch-anime .anime3{
+    grid-area: anime3;
+    background-image: url(../../img/shop_img/thumb/boruto.jpg);
+}
+#watch-anime .anime4{
+    grid-area: anime4;
+    background-image: url(../../img/shop_img/thumb/demon\ slayer.jpg);
+}
+#watch-anime .anime5{
+    grid-area: anime5;
+    background-image: url(../../img/shop_img/thumb/dragon\ ball\ super.jpg);
+}
+#watch-anime .anime6{
+    grid-area: anime6;
+    background-image: url(../../img/shop_img/thumb/jujutsu\ kaisen.jpg);
+}
+#watch-anime .anime7{
+    grid-area: anime7;
+    background-image: url(../../img/shop_img/thumb/naruto.jpg);
+}
+#watch-anime .anime8{
+    grid-area: anime8;
+    background-image: url(../../img/shop_img/thumb/one-piece.jpg);
+}
+#watch-anime .anime9{
+    grid-area: anime9;
+    background-image: url(../../img/shop_img/thumb/seven\ deadly\ sins.jpg);
+}
+#watch-anime .anime10{
+    grid-area: anime10;
+    background-image: url(../../img/shop_img/thumb/sword\ art\ online.jpg);
+}
+#watch-anime .anime11{
+    grid-area: anime11;
+    background-image: url(../../img/shop_img/thumb/That-Time-I-Got-Reincarnated-as-a-Slime-season-1.jpg);
+}
+#watch-anime .anime12{
+    grid-area: anime12;
+    background-image: url(../../img/shop_img/thumb/the\ devil\ is\ a\ part\ timer.jpg);
+}
+
+
+/* tv series */
+#tvseries{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: 
+    "tvseries-h2 tvseries-h2 tvseries-h2 tvseries-h2 tvseries-h2 tvseries-h2"
+    "series1 series2 series3 series4 series5 series6"
+    "series7 series8 series9 series10 series11 series12";
+}
+#tvseries h2{
+    grid-area: tvseries-h2;
+}
+#tvseries .series1{
+    grid-area: series1;
+    background-image: url(../../img/shop_img/thumb/arrow.jpg);
+}
+#tvseries .series2{
+    grid-area: series2;
+    background-image: url(../../img/shop_img/thumb/game\ of\ thrones.jpg);
+}
+#tvseries .series3{
+    grid-area: series3;
+    background-image: url(../../img/shop_img/thumb/house\ of\ dragon.jpg);
+}
+#tvseries .series4{
+    grid-area: series4;
+    background-image: url(../../img/shop_img/thumb/loki.jpg);
+}
+#tvseries .series5{
+    grid-area: series5;
+    background-image: url(../../img/shop_img/thumb/Man-vs-Bee-poster-Netflix.jpg);
+}
+#tvseries .series6{
+    grid-area: series6;
+    background-image: url(../../img/shop_img/thumb/obi-wan\ kenobi.jpg);
+}
+#tvseries .series7{
+    grid-area: series7;
+    background-image: url(../../img/shop_img/thumb/peaky\ blinders.jpg);
+}
+#tvseries .series8{
+    grid-area: series8;
+    background-image: url(../../img/shop_img/thumb/the\ flash.jpg);
+}
+#tvseries .series9{
+    grid-area: series9;
+    background-image: url(../../img/shop_img/thumb/the\ lord\ of\ the\ rings.jpg);
+}
+#tvseries .series10{
+    grid-area: series10;
+    background-image: url(../../img/shop_img/thumb/the\ witcher.jpg);
+}
+#tvseries .series11{
+    grid-area: series11;
+    background-image: url(../../img/shop_img/thumb/vikings.jpg);
+}
+#tvseries .series12{
+    grid-area: series12;
+    background-image: url(../../img/shop_img/thumb/wednesday.jpg);
+}
+
+/* Popup window when clicked ----------------------------------------------- */
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.full-img img{
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+    max-height: 51rem;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-family: RobotoSlabMedium;
+    font-size: 2.2rem;
+    color: var(--lightyellow);
+    cursor: pointer;
+}
+.full-img span:hover{
+    transform: scale(1.5);
+    color: var(--red);
+}
+.review{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 45rem;
+    max-height: 51rem;
+    background-color: var(--lightyellow);
+    border: 1rem solid var(--black);
+    border-radius: 1rem;
+}
+.review h2,
+.review p{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: RobotoSlabMedium;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: left;
+    background-color: transparent;
+    color: var(--darkgray);
+    margin: 1rem;
+}
+.review p{
+    font-size: 1.5rem;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+.star{
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0 0 1rem;
+    background-image: url(../../icons/star.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rating p{
+    font-family: RobotoSlabBold;
+    font-size: 2rem;
+    display: flex;
+}
+
+/*  ------------------------------------------------------------------------------------------------  */
+
+
+/* moving list of movies */
+@keyframes moveImages {
+    0% {
+        transform: translateX(100%);/* start off-screen to the right */
+    }
+   100% {
+        transform: translateX(-100%);/* move of-screen to the left */
+   }
+}
+
+
+/* mobile version */
+/* < 600px(max), 601(min), 768px(min), 992px(min), 1200px(min) */
+@media only screen and (max-width: 600px){
+    main{
+        background-image: none;
+        background-color: var(--lightyellow);
+    }
+    /* top moving gallery */
+    #moving-gallery{
+        display: none;
+    }
+
+    /* movies */
+    #movie-gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "gallery-h2 gallery-h2"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 img10"
+        "img11 img12";
+    }
+    #movie-gallery h2,
+    #watch-anime h2,
+    #tvseries h2{
+        height: 1.5rem;
+    }
+    #movie-gallery h2 a,
+    #watch-anime h2 a,
+    #tvseries h2 a{
+        font-size: 1.7rem;
+    }
+    #movie-gallery h2 img,
+    #watch-anime h2 img,
+    #tvseries h2 img{
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem 2rem 0 0;
+    }
+    #movie-gallery .movie-img,
+    .anime-img,
+    .series-img{
+        height: 20rem;
+    }
+    .movie-img a,
+    .anime-img a,
+    .series-img a{
+    font-size: 1.2rem;
+    }
+
+    /* anime */
+    #anime{
+        margin-top: 1rem;
+        background-image: none;
+        background-color: var(--skyblue);
+    }
+    #watch-anime{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "anime-h2 anime-h2"
+        "anime1 anime2"
+        "anime3 anime4"
+        "anime5 anime6"
+        "anime7 anime8"
+        "anime9 anime10"
+        "anime11 anime12";
+    }
+
+    /* tv series */
+    #tvseries{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "tvseries-h2 tvseries-h2"
+        "series1 series2"
+        "series3 series4"
+        "series5 series6"
+        "series7 series8"
+        "series9 series10"
+        "series11 series12";
+    }
+
+    /* Popup window when clicked ----------------------------------------------- */
+    .full-img img{
+        max-width: 28rem;
+        max-height: 37rem;
+        margin-left: 0.5rem;
+    }
+    .full-img span{
+        right: 7%;
+        font-size: 2.1rem;
+    }
+    .review{
+        border: 0.5rem solid var(--black);
+        max-width: 45rem;
+        max-height: 37rem;
+        margin-right: 0.5rem;
+    }
+    .review h2,
+    .review p{
+        font-size: 1rem;
+    }
+    .review p{
+        font-size: 0.7rem;
+    }
+    .star{
+        width: 1.7rem;
+        height: 1.7rem;
+        margin: 1.6rem 0 0 1.8rem;
+    }
+    .rating p{
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 767px){
+    main{
+        background-image: none;
+        background-color: var(--lightyellow);
+    }
+    #moving-gallery{
+        display: none;
+    }
+    /* movies */
+    #movie-gallery h2,
+    #watch-anime h2,
+    #tvseries h2{
+        height: 1.2rem;
+    }
+    #movie-gallery h2 a,
+    #watch-anime h2 a,
+    #tvseries h2 a{
+        font-size: 1.5rem;
+    }
+    #movie-gallery h2 img,
+    #watch-anime h2 img,
+    #tvseries h2 img{
+        width: 3.7rem;
+        height: 3.7rem;
+        margin: 1rem 2rem 0 0;
+    }
+    #movie-gallery .movie-img,
+    .anime-img,
+    .series-img{
+        height: 18rem;
+    }
+    .movie-img a,
+    .anime-img a,
+    .series-img a{
+    font-size: 1.25rem;
+    }
+
+    /* movies */
+    #movie-gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 img11 img12";
+    }
+    /* anime */
+    #anime{
+        margin-top: 1rem;
+        background-image: none;
+        background-color: var(--skyblue);
+    }
+    #watch-anime{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "anime-h2 anime-h2 anime-h2 anime-h2"
+        "anime1 anime2 anime3 anime4"
+        "anime5 anime6 anime7 anime8"
+        "anime9 anime10 anime11 anime12";
+    }
+
+    /* tv series */
+    #tvseries{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "tvseries-h2 tvseries-h2 tvseries-h2 tvseries-h2"
+        "series1 series2 series3 series4"
+        "series5 series6 series7 series8"
+        "series9 series10 series11 series12";
+    }
+
+    /* Popup window when clicked ----------------------------------------------- */
+    .full-img img{
+        max-width: 30rem;
+        max-height: 45rem;
+        margin-left: 0.5rem;
+    }
+    .full-img span{
+        right: 5%;
+        font-size: 2.4rem;
+    }
+    .review{
+        border: 0.5rem solid var(--black);
+        max-width: 45rem;
+        max-height: 45rem;
+        margin-right: 0.5rem;
+    }
+    .review h2,
+    .review p{
+        font-size: 1.4rem;
+    }
+    .review p{
+        font-size: 1.1rem;
+    }
+    .star{
+        width: 1.85rem;
+        height: 1.85rem;
+        margin: 1.6rem 0 0 1.8rem;
+    }
+    .rating p{
+        font-size: 1.85rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /* top moving gallery */
+    #moving-gallery{
+        display: none;
+    }
+    /* movies */
+    #movie-gallery h2,
+    #watch-anime h2,
+    #tvseries h2{
+        height: 1.5rem;
+    }
+    #movie-gallery h2 a,
+    #watch-anime h2 a,
+    #tvseries h2 a{
+        font-size: 1.65rem;
+    }
+    #movie-gallery h2 img,
+    #watch-anime h2 img,
+    #tvseries h2 img{
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem 2rem 0 0;
+    }
+    #movie-gallery .movie-img,
+    .anime-img,
+    .series-img{
+        height: 23rem;
+    }
+    .movie-img a,
+    .anime-img a,
+    .series-img a{
+    font-size: 1.4rem;
+    }
+    /* movies */
+    #movie-gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 img11 img12";
+    }
+    /* anime */
+    #anime{
+        margin-top: 1rem;
+        background-image: none;
+        background-color: var(--skyblue);
+    }
+    #watch-anime{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "anime-h2 anime-h2 anime-h2 anime-h2"
+        "anime1 anime2 anime3 anime4"
+        "anime5 anime6 anime7 anime8"
+        "anime9 anime10 anime11 anime12";
+    }
+
+    /* tv series */
+    #tvseries{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "tvseries-h2 tvseries-h2 tvseries-h2 tvseries-h2"
+        "series1 series2 series3 series4"
+        "series5 series6 series7 series8"
+        "series9 series10 series11 series12";
+    }
+    /* Popup window when clicked ----------------------------------------------- */
+    .full-img img{
+        max-width: 30rem;
+        max-height: 45rem;
+    }
+    .full-img span{
+        right: 5%;
+        font-size: 2.3rem;
+    }
+    .review{
+        border: 0.5rem solid var(--black);
+        max-width: 45rem;
+        max-height: 45rem;
+    }
+    .review h2,
+    .review p{
+        font-size: 1.7rem;
+    }
+    .review p{
+        font-size: 1.3rem;
+    }
+    .star{
+        width: 2rem;
+        height: 2rem;
+        margin: 1.8rem 0 0 1.8rem;
+    }
+    .rating p{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    /* top moving gallery */
+    #moving-gallery{
+        display: none;
+    } 
+    /* movies */
+     #movie-gallery h2,
+     #watch-anime h2,
+     #tvseries h2{
+         height: 1rem;
+     }
+     #movie-gallery h2 a,
+     #watch-anime h2 a,
+     #tvseries h2 a{
+         font-size: 1.7rem;
+     }
+     #movie-gallery h2 img{
+         margin: 1rem 2rem -1rem 0;
+     }
+     #movie-gallery h2 img,
+     #watch-anime h2 img,
+     #tvseries h2 img{
+         width: 3.5rem;
+         height: 3.5rem;
+         margin: 0 2rem -1rem 0;
+     }
+     #movie-gallery .movie-img{
+         margin-top: 1rem;
+     }
+     .movie-img,
+     .anime-img,
+     .series-img{
+         width: auto;
+         height: 27rem;
+     }
+     .movie-img a,
+     .anime-img a,
+     .series-img a{
+         font-size: 1.7rem;
+     }
+
+    /* Popup window when clicked ----------------------------------------------- */
+     .full-img img{
+        max-width: 30rem;
+        max-height: 51rem;
+    }
+    .full-img span{
+        right: 5%;
+        font-size: 2.5rem;
+    }
+    .review{
+        border: 0.5rem solid var(--black);
+        max-width: 30rem;
+        max-height: 51rem;
+    }
+    .review h2,
+    .review p{
+        font-size: 1.7rem;
+    }
+    .review p{
+        font-size: 1.3rem;
+    }
+    .star{
+        width: 2rem;
+        height: 2rem;
+        margin: 1.8rem 0 0 1.8rem;
+    }
+    .rating p{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1499px){
+    /* movies */
+    #movie-gallery h2,
+    #watch-anime h2,
+    #tvseries h2{
+        height: 3rem;
+    }
+    #movie-gallery h2 a,
+    #watch-anime h2 a,
+    #tvseries h2 a{
+        font-size: 2.2rem;
+    }
+   .movie-img a,
+   .anime-img a,
+   .series-img a{
+       font-size: 1.2rem;
+   }
+    /* Popup window when clicked ----------------------------------------------- */
+   .full-img img{
+         max-width: 30rem;
+         max-height: 48rem;
+   }
+   .review{
+         max-width: 41rem;
+         max-height: 48rem;
+   }
+   .review h2,
+   .review p{
+         font-size: 2rem;
+   }
+   .review p{
+         font-size: 1.2rem;
+   }
+   .star{
+         width: 2.9rem;
+         height: 2.9rem;
+         margin: 1.3rem 0 0 1rem;
+
+    }
+    .rating p{
+         font-size: 1.9rem;
+    }
+}
+
